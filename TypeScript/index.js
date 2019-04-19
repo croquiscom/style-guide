@@ -4,6 +4,14 @@ module.exports = {
     'tslint:recommended',
   ],
   rules: {
+    // 들여쓰기는 공백 2칸을 사용합니다.
+    'indent': {
+      options: [
+        'spaces',
+        2,
+      ],
+    },
+
     // 인터페이스에서 I 접두사를 붙이지 않습니다.
     'interface-name': {
       options: [

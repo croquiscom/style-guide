@@ -5,6 +5,12 @@
   ],
   "jsRules": {},
   "rules": {
+    "indent": {
+      "options": [
+        "spaces",
+        2
+      ]
+    },
     "interface-name": {
       "options": [
         "never-prefix"
