@@ -28,7 +28,7 @@
 ## 예제
 
 ### no-var-keyword:true
-```
+```typescript
 // bad
 var myVar;
 myVar = 1;
@@ -39,7 +39,7 @@ myVar = 1;
 ```
 
 ### prefer-const:true
-```
+```typescript
 // bad
 let myConst = 1;
 
@@ -48,7 +48,7 @@ const myConst = 1;
 ```
 
 ### interface-name:never-prefix
-```
+```typescript
 // bad
 interface IMyInterface {
 }
@@ -59,7 +59,7 @@ interface MyInterface {
 ```
 
 ### quotemark:single
-```
+```typescript
 // bad
 const myStr = "hello";
 
@@ -68,7 +68,7 @@ const myStr = 'hello';
 ```
 
 ### trailing-comma:multiline-always
-```
+```typescript
 // bad
 const myObj = {
   a: 1,
