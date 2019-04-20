@@ -24,3 +24,60 @@
 ## 기타
 
 * 함수의 인자 개수는 가급적 5개 이하로 유지합니다. 그 이상이 필요하면 객체를 만들어 넘깁니다.
+
+## 예제
+
+### no-var-keyword:true
+```
+// bad
+var myVar;
+myVar = 1;
+
+// good
+let myVar;
+myVar = 1;
+```
+
+### prefer-const:true
+```
+// bad
+let myConst = 1;
+
+// good
+const myConst = 1;
+```
+
+### interface-name:never-prefix
+```
+// bad
+interface IMyInterface {
+}
+
+// good
+interface MyInterface {
+}
+```
+
+### quotemark:single
+```
+// bad
+const myStr = "hello";
+
+// good
+const myStr = 'hello';
+```
+
+### trailing-comma:multiline-always
+```
+// bad
+const myObj = {
+  a: 1,
+  b: 2
+};
+
+// good
+const myObj = {
+  a: 1,
+  b: 2,
+};
+```
