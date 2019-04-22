@@ -26,11 +26,13 @@ module.exports = {
       ],
     },
 
-    // 한 줄을 길게 쓰는 것을 허용합니다.
+    // 한 줄은 한 화면에 들어오게 하는 것이 권장사항입니다.
+    // 다만 특별한 경우에는 길게 작성해도 됩니다.
     'max-line-length': {
       options: [
-        400,
+        150,
       ],
+      severity: 'warning',
     },
 
     // public/private 키워드를 강제하지 않습니다.
