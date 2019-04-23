@@ -1,24 +1,24 @@
 export { };
 
 // no-var-keyword:true
-var myVar;
-myVar = 1;
+var my_var: number;
+my_var = 1;
 
 // prefer-const:true
-let myConst = 1;
+let my_const = 1;
 
 // interface-name:never-prefix
 interface IMyInterface {
 }
 
 // quotemark:single
-const myStr = "hello";
+const my_str = "hello";
 
 // variable-name:no-allow-leading-underscore
 const _invalid_name = 1;
 
 // trailing-comma:multiline-always
-const myObj = {
+const my_obj = {
   a: 1,
   b: 2
 };

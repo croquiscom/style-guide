@@ -30,21 +30,21 @@
 ### no-var-keyword:true
 ```typescript
 // bad
-var myVar;
-myVar = 1;
+var my_var: number;
+my_var = 1;
 
 // good
-let myVar;
-myVar = 1;
+let my_var: number;
+my_var = 1;
 ```
 
 ### prefer-const:true
 ```typescript
 // bad
-let myConst = 1;
+let my_const = 1;
 
 // good
-const myConst = 1;
+const my_const = 1;
 ```
 
 ### interface-name:never-prefix
@@ -61,23 +61,35 @@ interface MyInterface {
 ### quotemark:single
 ```typescript
 // bad
-const myStr = "hello";
+const my_str = "hello";
 
 // good
-const myStr = 'hello';
+const my_str = 'hello';
 ```
 
 ### trailing-comma:multiline-always
 ```typescript
 // bad
-const myObj = {
+const my_obj = {
   a: 1,
   b: 2
 };
 
 // good
-const myObj = {
+const my_obj = {
   a: 1,
   b: 2,
 };
+```
+
+### variable-name
+```typescript
+// bad
+const SomeValue = 1;
+
+// best
+const some_value = 1;
+
+// allow
+const someValue = 1;
 ```

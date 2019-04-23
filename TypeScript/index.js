@@ -77,13 +77,13 @@ module.exports = {
       },
     },
 
-    // 변수명으로 lowerCamelCase, PascalCase, snake_case, UPPER_CASE 모두 허용합니다.
-    // 하지만 _로 시작하거나 끝나는 것을 허용하지는 않습니다.
+    // 변수명은 snake_case가 기본입니다. 하지만 lowerCamelCase도 허용합니다.
+    // 상수에 가까운 변수인 경우 UPPER_CASE를 사용합니다.
+    // PascalCase나 _로 시작하거나 끝나는 것을 허용하지는 않습니다.
     'variable-name': {
       options: [
         'ban-keywords',
         'check-format',
-        'allow-pascal-case',
         'allow-snake-case',
       ],
     },
