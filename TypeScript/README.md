@@ -21,6 +21,13 @@
   * 가능하면 native Promise를 사용합니다.
   * 고급기능이 필요하면 bluebird를 사용해도 됩니다.
 
+## Compiler Options (tsconfig.json)
+
+* esModuleInterop - true
+* noImplicitAny - 가급적 true로 하지만, 레거시 코드가 많은 경우 false도 가능합니다.
+* noImplicitThis - true
+* strictNullChecks - true
+
 ## 기타
 
 * 함수의 인자 개수는 가급적 5개 이하로 유지합니다. 그 이상이 필요하면 객체를 만들어 넘깁니다.
