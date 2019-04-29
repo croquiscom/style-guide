@@ -42,6 +42,9 @@
 ## 예제
 
 ### no-var-keyword:true
+
+* 변수 선언에 `var` 대신 `let` 키워드를 사용합니다.
+
 ```typescript
 // bad
 var my_var: number;
@@ -53,6 +56,9 @@ my_var = 1;
 ```
 
 ### prefer-const:true
+
+* 값이 재할당되지 않는 변수에는 `const` 키워드를 사용합니다.
+
 ```typescript
 // bad
 let my_const = 1;
@@ -61,7 +67,26 @@ let my_const = 1;
 const my_const = 1;
 ```
 
+### indent:[spaces, 2]
+
+* 들여쓰기는 공백 2칸을 사용합니다.
+
+```typescript
+// bad
+{
+    const my_const = 1;
+}
+
+// good
+{
+  const my_const = 1;
+}
+```
+
 ### interface-name:never-prefix
+
+* 인터페이스에서 `I` 접두사를 붙이지 않습니다.
+
 ```typescript
 // bad
 interface IMyInterface {
@@ -73,6 +98,9 @@ interface MyInterface {
 ```
 
 ### quotemark:single
+
+* 문자열은 작은 따옴표를 사용합니다.
+
 ```typescript
 // bad
 const my_str = "hello";
@@ -82,6 +110,10 @@ const my_str = 'hello';
 ```
 
 ### trailing-comma:multiline-always
+
+* 여러 줄로 이루어진 객체 정의, import등에서 마지막 줄에 항상 콤마를 사용합니다.
+* 버전 관리 시스템 친화적인 코드가 됩니다.
+
 ```typescript
 // bad
 const my_obj = {
@@ -97,6 +129,11 @@ const my_obj = {
 ```
 
 ### variable-name
+
+* 변수 이름은 lowerCamelCased, UPPER_CASED, PascalCase, snake_case가 허용됩니다.
+* 몇 가지 TypeScript keyword들을 변수나 파라미터 이름으로 사용할 수 없습니다.
+* `_`로 시작하거나 끝나는 것을 허용하지는 않습니다.
+
 ```typescript
 // bad
 const SomeValue = 1;
