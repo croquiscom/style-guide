@@ -39,7 +39,7 @@
 * noImplicitThis - true
 * strictNullChecks - true
 
-## 예제
+## Rules ([tslint.json](tslint.json) / [index.js](index.js))
 
 ### no-var-keyword:true
 
