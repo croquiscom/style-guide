@@ -4,14 +4,14 @@
 
 - 어떤 모델(리소스)을 반환하는 query는 모델명의 snake_case를 query명으로 한다.
   - 예) product, user
-- 모델의 배열을 반환하는 query는 모델명에 _list를 붙인다.
+- 모델의 배열을 반환하는 query는 모델명에 \_list를 붙인다.
   - 예) product_list, user_list
 - mutation이나 모델을 반환하지 않는 query는 lowerCamelCase를 사용하고 동사로 시작한다.
   - 예) createProduct, getUserFeatureList
-- pagination 필드는 limit_count, skip_count 또는 limit_count, after, end_cursor 사용한다
 - 타입명은 UpperCamelCase(PascalCase)를 사용한다.
 - mutation의 입력 타입명은 Input postfix를 사용한다.
   - 예) CreateProductInput
+- enum의 값들은 UPPER_CASE를 사용한다.
 
 ## query 인자
 
@@ -54,9 +54,22 @@
 
 ## pagination
 
-- pagination은 개수 방식과 커서 방식이 있다. 둘다 지원할 수도 있다.
+- pagination은 개수 방식(limit_count, skip_count)과 커서 방식(limit_count, after, end_cursor)이 있다. 둘다 지원할 수도 있다.
 - 개수 방식은 limit_count / skip_count로 조절한다.
 - 커서 방식은 이전 query에서 반환한 end_cursor를 after 인자로 준다. 개수 제한은 limit_count로 한다.
+
+## 날짜/시간
+
+- 날짜/시간 필드는 date_xxx를 사용한다.
+- YYYYMMDD / YYYYMM 형태의 Int 타입의 날짜는 date_xxx_ymd, date_xxx_ym를 사용한다.
+- 날짜/시간 범위로 필터를 할 경우 date_xxx_from, date_xxx_to 이름을 사용한다. 이때 date_xxx_from 값을 가지는 객체는 포함하고, date_xxx_to 값을 가지는 객체는 포함하지 않는다.
+- Int 타입의 날짜 범위로 필터를 할 경우 date_xxx_ymd_from, date_xxx_ymd_to 이름을 사용한다. 이때 date_xxx_ymd_from, date_xxx_ymd_to 값을 가지는 객체를 모두 포함한다.
+
+## Custom Scalar
+
+- https://github.com/croquiscom/graphql-scalar-types 가 제공하는 Scalar를 사용한다.
+- 날짜/시간 필드는 CrTimestamp를 사용한다. 값은 모두 Float 으로 주고 받는다.
+- 객체 필드는 CrJson을 사용한다.
 
 ## 오류
 
@@ -65,5 +78,21 @@
   - 여러 언어를 지원하는 경우 사용자의 언어로 번역된 문자열을 담는다.
 - 프로그램이 오류를 처리할 수 있게 하는 오류 코드는 extensions.code에 담는다.
 
-## 예제
+## GraphQL over HTTP
 
+- GraphQL을 HTTP 프로토콜을 통해 주고 받을 경우 HTTP 상태 코드는 무조건 200을 사용한다.
+  > 404 Not Found / 500 Internal Server Error 같은 경우 프록시등에서 형태가 정해지지 않은 자체 에러를 반환한다.
+  > 반면 GraphQL 오류는 JSON 데이터를 해석해야 한다.
+  > 따라서 GraphQL 호출 자체는 성공(200)한 것으로 보고, 반환값을 해석해서 오류 처리를 하는 편이 자연스럽다.
+
+## 기타
+
+Query/Mutation 타입이 비어서 오류가 나는 경우 다음 코드를 사용한다.
+
+```graphql
+type Query {
+  _placeholder: Boolean
+}
+```
+
+## 예제
