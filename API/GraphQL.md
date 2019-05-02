@@ -8,14 +8,15 @@
   - 예) product_list, user_list
 - mutation이나 모델을 반환하지 않는 query는 lowerCamelCase를 사용하고 동사로 시작한다.
   - 예) createProduct, getUserFeatureList
+    > user_feature_list는 user_id, feature 라는 모델 데이터를 가진 배열을 반환한다면 getUserFeatureList는 다른 형태(이 경우 문자열의 배열)를 반환한다.
 - 타입명은 UpperCamelCase(PascalCase)를 사용한다.
+- enum 타입의 값들은 UPPER_CASE를 사용한다.
 - mutation의 입력 타입명은 Input postfix를 사용한다.
   - 예) CreateProductInput
-- enum의 값들은 UPPER_CASE를 사용한다.
 
 ## query 인자
 
-- query 인자는 기본적으로 optional이다
+- query 인자는 기본적으로 optional이다.
 - 주어진 인자는 필터로서 동작한다.
 - 두개 이상의 인자가 주어지는 경우 조건은 AND로 해석한다. (두개 조건을 모두 만족하는 레코드만 반환)
   - 단일 객체 query의 경우도 AND로 해석한다. 따라서 두개 인자가 서로 다른 레코드를 가리키는 경우 null을 반환한다.
@@ -67,7 +68,8 @@
 
 ## Custom Scalar
 
-- https://github.com/croquiscom/graphql-scalar-types 가 제공하는 Scalar를 사용한다.
+https://github.com/croquiscom/graphql-scalar-types 가 제공하는 Scalar를 사용한다.
+
 - 날짜/시간 필드는 CrTimestamp를 사용한다. 값은 모두 Float 으로 주고 받는다.
 - 객체 필드는 CrJson을 사용한다.
 
@@ -96,3 +98,110 @@ type Query {
 ```
 
 ## 예제
+
+```graphql
+"""상품"""
+type Product {
+  """기본 키"""
+  id: ID!
+
+  """상품명"""
+  name: String
+
+  """판매가"""
+  price: Int
+
+  """생성일자"""
+  date_created: CrTimestamp!
+
+  """출시일자"""
+  date_ymd_published: Int
+
+  """진열상태"""
+  hidden: Boolean!
+}
+
+"""상품 목록 및 요약 데이터"""
+type ProductList {
+  """총 목록 수"""
+  total_count: Int!
+
+  """상품 목록"""
+  item_list: [Product!]!
+}
+
+"""정렬 타입"""
+enum ProductOrderType {
+  ID_ASC
+  ID_DESC
+  NAME_ASC
+  NAME_DESC
+  DATE_YMD_PUBLISHED_ASC
+  DATE_YMD_PUBLISHED_DESC
+}
+
+type Query {
+  """
+  주어진 조건 모두에 일치하는 상품을 받는다.
+  조건에 맞는 상품이 없으면 null을 반환한다.
+  조건이 주어지지 않으면 null을 반환한다.
+  """
+  product(
+    """주어진 기본 키를 가지는 상품"""
+    id: ID
+  ): Product
+
+  """
+  주어진 조건 모두에 일치하는 상품 목록을 받는다.
+  조건이 주어지지 않으면 모든 상품을 반환한다.
+  """
+  product_list(
+    """주어진 기본 키를 가지는 상품"""
+    id_list: [ID!]
+
+    """상품명 쿼리"""
+    name_query: String
+
+    """skip 개수"""
+    skip_count: Int
+
+    """limit 개수 (default: 10)"""
+    limit_count: Int
+
+    """정렬 조건"""
+    order: ProductOrderType
+  ): ProductList!
+}
+
+"""createProductList의 건별 입력"""
+input CreateProductInput {
+  """상품명"""
+  name: String!
+
+  """판매가"""
+  price: Int!
+}
+
+"""createProductList의 입력"""
+input CreateProductListInput {
+  item_list: [CreateProductInput!]!
+}
+
+"""publishProduct의 입력"""
+input PublishProductInput {
+  """상품ID"""
+  id: ID!
+}
+
+type Mutation {
+  """상품목록을 생성한다"""
+  createProductList(input: CreateProductListInput!): ProductList!
+
+  """
+  상품을 출시한다
+  [error_code]
+  - product_not_found: 출시할 상품이 없습니다
+  """
+  publishProduct(input: PublishProductInput!): Boolean!
+}
+```
