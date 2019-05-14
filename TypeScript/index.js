@@ -12,7 +12,7 @@ module.exports = {
       ],
     },
 
-    // 인터페이스에서 I 접두사를 붙이지 않는다.
+    // 인터페이스 이름에 I 접두사를 붙이지 않는다.
     'interface-name': {
       options: [
         'never-prefix',
@@ -26,8 +26,8 @@ module.exports = {
       ],
     },
 
-    // 한 줄은 한 화면에 들어오게 하는 것이 권장사항이다.
-    // 다만 특별한 경우에는 길게 작성해도 된다.
+    // 한 줄은 한 화면에 들어오게 하는 것을 권장한다.
+    // 다만 특별한 경우에는 길게 작성하는 것을 허용한다.
     'max-line-length': {
       options: [
         150,
@@ -74,9 +74,9 @@ module.exports = {
       },
     },
 
-    // 몇 가지 TypeScript keyword들을 변수나 파라미터 이름으로 사용할 수 없다.
-    // 변수 이름은 lowerCamelCased, UPPER_CASED, PascalCase, snake_case가 허용힌다.
-    // _로 시작하거나 끝나는 것을 허용하지는 않는다.
+    // 몇 가지 TypeScript keyword들은 변수나 파라미터 이름으로 사용할 수 없다.
+    // 변수 이름은 lowerCamelCased, UPPER_CASED, PascalCase, snake_case를 허용힌다.
+    // _로 시작하거나 끝나는 것을 허용하지 않는다.
     'variable-name': {
       options: [
         'ban-keywords',
