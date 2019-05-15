@@ -17,6 +17,7 @@
 ## query 인자
 
 - query 인자는 기본적으로 optional이다.
+  - 요구사항에 따라 필수 인자도 가능하다. (예. order_list의 user_id 인자)
 - 주어진 인자는 필터로서 동작한다.
 - 두개 이상의 인자가 주어지는 경우 조건은 AND로 해석한다. (주어진 조건을 모두 만족하는 레코드만 반환)
   - 단일 객체 query의 경우도 AND로 해석한다. 따라서 두개 인자가 서로 다른 레코드를 가리키는 경우 null을 반환한다.
@@ -24,6 +25,18 @@
 - 인자가 주어지지 않는 경우... (pagination / 순서 관련 인자 제외)
   - 단일 객체 query는 어떤 객체에도 대응하지 않는다.
   - 객체 목록 query는 모든 객체에 대응한다.
+- 여러가지 값 중 하나를 가지는 레코드를 찾으려면 \_list 인자에 배열을 준다.
+  - 예) id_list: ['1','4'], status_list: [NORMAL, SOLD_OUT]
+- 동일성 검사가 아닌 경우 이름 뒤에 원하는 연산자를 붙인다.
+  - gt, gte, lt, lte: >, >=, <, <=
+  - contains: 해당 텍스트를 포함한다. 대소문자를 구분한다.
+  - icontains: 해당 텍스트를 포함한다. 대소문자를 구분하지 않는다.
+  - startswith: 해당 텍스트로 시작한다. 대소문자를 구분한다.
+  - istartswith: 해당 텍스트로 시작한다. 대소문자를 구분하지 않는다.
+  - endswith: 해당 텍스트로 끝난다. 대소문자를 구분한다.
+  - iendswith: 해당 텍스트로 끝난다. 대소문자를 구분하지 않는다.
+  - isnull: 값이 null(true) 또는 not null(false)인지 검사한다.
+  - 예) title_contains, date_created_gte, manager_isnull
 
 ## mutation 입력 / 결과
 
@@ -63,9 +76,12 @@
 ## 날짜/시간
 
 - 날짜/시간 필드는 date_xxx를 사용한다.
+  - 예) date_created, date_updated
 - YYYYMMDD / YYYYMM 형태의 Int 타입의 날짜는 date_xxx_ymd, date_xxx_ym를 사용한다.
-- 날짜/시간 범위로 필터를 할 경우 date_xxx_from, date_xxx_to 이름을 사용한다. 이때 date_xxx_from 값을 가지는 객체는 포함하고, date_xxx_to 값을 가지는 객체는 포함하지 않는다.
-- Int 타입의 날짜 범위로 필터를 할 경우 date_xxx_ymd_from, date_xxx_ymd_to 이름을 사용한다. 이때 date_xxx_ymd_from, date_xxx_ymd_to 값을 가지는 객체를 모두 포함한다.
+- 날짜/시간 범위로 필터를 할 경우 date_xxx_gte, date_xxx_lt 이름을 사용한다. Int 타입의 날짜 범위로 필터를 할 경우 date_xxx_ymd_gte, date_xxx_ymd_lte 이름을 사용한다.
+  > 초기에 만들어진 API는 비교 연산자 대신 from, to를 사용하는 것이 있다.
+  > 날짜/시간 범위일 경우 from은 포함, to는 비포함이다. (from: 'PM 1', to: 'PM 2' 조건인 경우 오후 1시는 포함하고, 오후 2시는 제외)
+  > Int 타입의 날짜인 경우 from, to 모두 포함이다. (from: 20190501, to: 20190510 조건인 경우 1일과 10일 모두 포함)
 
 ## Custom Scalar
 
@@ -79,6 +95,7 @@ https://github.com/croquiscom/graphql-scalar-types 가 제공하는 Scalar를 �
 - query/mutation 처리 중 발생한 오류는 반환값의 errors 필드에 담겨 반환한다.
 - 오류 객체의 message 필드는 사람이 인지하는 문자열을 담아 반환한다.
   - 여러 언어를 지원하는 경우 사용자의 언어로 번역된 문자열을 담는다.
+  > 서버에서 문자열을 반환하면 클라이언트가 오류 코드에 대해서 몰라도 사용자에게 적절한 에러 메시지를 표시해줄 수 있다. 다만 서버가 클라이언트의 언어를 알아야 하는 불편함은 있다.
 - 프로그램이 오류를 처리할 수 있게 하는 오류 코드는 extensions.code에 담는다.
 
 ## GraphQL over HTTP
