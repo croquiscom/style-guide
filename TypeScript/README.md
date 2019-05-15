@@ -3,39 +3,41 @@
 ## Lint
 
 기본적으로는 [tslint:recommended](https://github.com/palantir/tslint/blob/master/src/configs/recommended.ts)의
-설정을 따르지만, 몇가지 예외를 가지고 있습니다.
-예외적인 설정에 대해서는 [index.js](index.js)를 참고하면 됩니다.
+설정을 따르지만, 몇가지 예외를 가진다.
+예외적인 설정에 대해서는 [index.js](index.js)를 참고한다.
 
-모듈 설치 대신 설정을 복사해서 사용할 수 있도록 [tslint.json](tslint.json)도 동일한 내용을 포함하고 있습니다.
+모듈 설치 대신 설정을 복사해서 사용할 수 있도록 [tslint.json](tslint.json)도 같은 내용을 나타낸다.
 
-## 네이밍
+### 네이밍
 
-* 함수/메소드 이름은 lowerCamelCase를 사용합니다.
-* 변수명은 snake_case가 기본입니다. 하지만 lowerCamelCase도 허용합니다.
-* 상수에 가까운 변수인 경우 UPPER_CASE를 사용합니다.
-* PascalCase는 기본적으로 허용하지 않습니다만, 클래스에 가까운 변수인 경우(예, React의 HOC) 사용할 수 있습니다.
+* 함수/메소드 이름은 lowerCamelCase를 사용한다.
+* 변수명은 snake_case가 기본이지만 lowerCamelCase도 허용한다.
+* 상수에 가까운 변수인 경우 UPPER_CASE를 사용한다.
+* PascalCase는 기본적으로 허용하지 않지만, 클래스에 가까운 변수인 경우(예, React의 HOC) 사용할 수 있다.
 
 ### 기타
 
-* 함수의 인자 개수는 가급적 5개 이하로 유지합니다. 그 이상이 필요하면 객체를 만들어 넘깁니다.
+* 버전 관리 시스템 친화적인 코드를 위해 여러 줄로 이루어진 객체 정의, import등에서 마지막 줄에 항상 콤마를 사용한다.
+* 클래스 멤버 순서나 객체 리터럴 필드 순서를 강제하면 버전 관리 시스템에는 좋지만, 코드를 볼 때 힘들기 때문에 강제하지 않는다.
+* 함수의 인자 개수는 가급적 5개 이하로 유지한다. 그 이상이 필요하면 객체를 만들어 넘긴다.
 
 ## 라이브러리
 
-* 여러 선택지가 있는 경우 TypeScript 친화적인 라이브러리를 사용합니다.
+* 여러 선택지가 있는 경우 TypeScript 친화적인 라이브러리를 사용한다.
 * 유틸리티 라이브러리 (lodash, underscore, ramda 등)
-  * ES5/ES6로 작성 가능한 경우에도 가독성을 위해 유틸리티 라이브러리를 사용할 수 있습니다. (선택사항)
-  * 여러 라이브러리중 lodash를 사용합니다.
-  * 클라이언트에서는 tree shaking이 되는 lodash-es를 사용합니다.
+  * ES5/ES6로 작성 가능한 경우에도 가독성을 위해 유틸리티 라이브러리를 사용할 수 있다. (선택사항)
+  * 여러 라이브러리중 lodash를 사용한다.
+  * 클라이언트에서는 tree shaking이 되는 lodash-es를 사용한다.
 * 시간 라이브러리 (moment, date-fns, dayjs 등)
-  * 서버에서는 moment, 클라이언트에서는 date-fns를 사용합니다.
+  * 서버에서는 moment, 클라이언트에서는 date-fns를 사용한다.
 * Promise 라이브러리 (native, Bluebird, q 등)
-  * 가능하면 native Promise를 사용합니다.
-  * 고급기능(예, map의 concurrency)이 필요하면 bluebird를 사용해도 됩니다.
+  * 가능하면 native Promise를 사용한다.
+  * 고급기능(예, map의 concurrency)이 필요하면 bluebird를 사용해도 된다.
 
 ## Compiler Options (tsconfig.json)
 
 * esModuleInterop - true
-* noImplicitAny - 가급적 true로 하지만, 레거시 코드가 많은 경우 false도 가능합니다.
+* noImplicitAny - 가급적 true로 하지만, 레거시 코드가 많은 경우 false도 가능하다.
 * noImplicitThis - true
 * strictNullChecks - true
 
