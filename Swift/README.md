@@ -9,9 +9,7 @@
 ## 1. 코드 레이아웃
 
 - 들여쓰기에는 4개의 space를 사용합니다.
-
 - 줄바꿈
-
   - 배열 혹은 딕셔너리의 경우 아래와 같이 줄바꿈합니다.
 
     ```swift
@@ -24,7 +22,6 @@
     	  "dictKey2": "value2"
     ]
     ```
-
   - 함수를 호출하는 코드에서 파라미터가 두 개 이상인 경우에는 파라미터를 기준으로 줄바꿈합니다.
 
     ```swift
@@ -33,39 +30,36 @@
         secondArgument: resultFromSomeFunction(),
         thirdArgument: someOtherLocalProperty)
     ```
-
   - `if-let` 구문, `guard-let` 구문은 아래와 같이 줄바꿈하고 한 칸 들여씁니다.
 
     ```swift
-    if let user = self.veryLongFunctionNameWhichReturnsOptionalUser(), 
-    	let name = user.veryLongFunctionNameWhichReturnsOptionalName(), 
-    	user.gender == .female { 
-      // ... 
+    if let user = self.veryLongFunctionNameWhichReturnsOptionalUser(),
+    	let name = user.veryLongFunctionNameWhichReturnsOptionalName(),
+    	user.gender == .female {
+      // ...
     }
     ```
-
   - 종료 할 때의 `guard` 구문은 아래와 같이 줄바꿈합니다.
 
     ```swift
     guard let error = error else { return }
     ```
-
 - 콜론(:)은 오른쪽에만 공백을 둡니다. (예외: 빈 딕셔너리`[:] `)
 
   ```swift
   // 좋은 예
-  var dict1: [String: String] = [:] 
+  var dict1: [String: String] = [:]
   var dict2: [String: String] = [
   	  "A": "1",
   	  "B": "2"
   ]
   class PirateViewController: UIViewController { /* ... */ }
-  
+
   // 나쁜 예
-  var dict1: [String : String] = [: ] 
+  var dict1: [String : String] = [: ]
   var dict2 :[String:String] = [
   	  "A" : "1",
-  	  "B" :"2" 
+  	  "B" :"2"
   ]
   class PirateViewController : UIViewController { /* ... */ }
   ```
@@ -74,13 +68,11 @@
 
   ```swift
   import UIKit
-  
+
   import FLAnimatedImage
   import RxSwift
   import ObjectMapper
   ```
-
-  
 
 ## 2. 네이밍
 
@@ -99,7 +91,7 @@
     var imageURL: String = ""
     var shopID: String = ""
     var id: String = ""
-    
+
     // 나쁜 예
     var imageUrl: String = ""
     var shopId: String = ""
@@ -111,7 +103,7 @@
     ```swift
     // 좋은 예
     let position = gestureRecognizer.location(in: goodsCollectionView)
-    
+
     // 나쁜 예
     let p = gestureRecognizer.location(in: mGoodsCollectionView)
     ```
@@ -121,7 +113,7 @@
   ```swift
   // 좋은 예
   class RoundAnimatingButton: UIButton { /* ... */ }
-  
+
   // 나쁜 예
   class CustomButton: UIButton { /* ... */ }
   ```
@@ -132,7 +124,7 @@
   // 좋은 예
   @IBOutlet weak var submitButton: UIButton!
   @IBOutlet weak var emailTextField: UITextField!
-  
+
   // 나쁜 예
   @IBOutlet weak var submit: UIButton!
   @IBOutlet weak var emailTF: UITextField!
@@ -143,7 +135,7 @@
   ```swift
   // 나쁜 예
   class ConnectionTableViewCell: UITableViewCell { /* ... */ }
-  
+
   // 좋은 예
   class ConnectionCell: UITableViewCell { /* ... */ }
   ```
@@ -160,13 +152,11 @@
         func logCurrentState()
         /* ... */
     }
-    
+
     protocol ModelType {
         var id: Int { get }
     }
     ```
-
-
 
 ## 3. 코딩 스타일
 
@@ -183,7 +173,7 @@
       // 한줄 띄기
       self.doSomething()
   }
-  
+
   // 나쁜 예
   myFunctionWithEscapingClosure() { [weak self] error -> Void in
       self?.doSomething()
@@ -195,10 +185,18 @@
   ```swift
   // 좋은 예
   imageView.backgroundColor = .white
-  
+
   // 나쁜 예
   imageView.backgroundColor = UIColor.white
   ```
+- 함수의 전달 인자가 Void 형태를 가지는 경우에는 `()` 혹은 `Void()` 를 넘깁니다.
+
+  ```swift
+  Observable<Void>.just(Void())
+
+  Observable<Void>.just(())
+  ```
+
 
 ### 프로토콜
 
@@ -209,17 +207,17 @@
   class MyViewController: UIViewController {
     // class stuff here
   }
-  
+
   // MARK: - UITableViewDataSource
   extension MyViewController: UITableViewDataSource {
     // table view data source methods
   }
-  
+
   // MARK: - UIScrollViewDelegate
   extension MyViewController: UIScrollViewDelegate {
     // scroll view delegate methods
   }
-  
+
   // 나쁜 예
   class MyViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate {
     // all methods
@@ -237,7 +235,7 @@
   { operaion, responseObject in
     // doSomething()
   }
-  
+
   // 나쁜 예
   { (operaion, responseObject) in
     // doSomething()
@@ -248,11 +246,11 @@
 
   ```swift
   // 좋은 예
-  ..., 
+  ...,
   completion: { finished in
     // doSomething()
   }
-  
+
   // 나쁜 예
   ...,
   completion: { (finished: Bool) -> Void in
@@ -267,7 +265,7 @@
   UIView.animate(withDuration: 0.5) {
     // doSomething()
   }
-  
+
   // 나쁜 예
   UIView.animate(withDuration: 0.5, animations: { () -> Void in
     // doSomething()
@@ -282,7 +280,7 @@
   // 좋은 예
   var str: String = ""
   var messages: [String] = []
-  
+
   // 나쁜 예
   var str = ""
   var messages = []
@@ -294,7 +292,7 @@
   // 좋은 예
   var messages: [String]?
   var names: [Int: String]?
-  
+
   // 나쁜 예
   var messages: Array<String>?
   var names: Dictionary<Int, String>?
@@ -304,9 +302,9 @@
 
   ```swift
   // 좋은 예
-  var names: [String] = [] 
+  var names: [String] = []
   var lookup: [String: Int] = [:]
-  
+
   // 나쁜 예
   var names = [String]()
   var lookup = [String: Int]()
@@ -328,17 +326,16 @@
   if let _ = error {
       fatalError()
   }
-  
+
   // 나쁜 예
   if error != nil {
       fatalError()
   }
   ```
 
-  
+
 
 ## 4. 주석
 
 - 주석 사용의 제한은 없으나 불명확한 의도를 가진 주석의 사용은 지양합니다.
 
-  
