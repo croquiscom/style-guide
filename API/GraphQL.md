@@ -3,9 +3,11 @@
 ## 이름
 
 - 어떤 모델(리소스)을 반환하는 query는 모델명의 snake_case를 query명으로 한다.
-  - 예) product, user
+  - product :o:, getProduct :x:
+  - user_account :o:, userAccount :x:
 - 모델의 배열을 반환하는 query는 모델명에 \_list를 붙인다.
-  - 예) product_list, user_list
+  - product_list :o:, products :x:
+  - user_account_list :o:, user_accounts :x:
 - mutation이나 모델을 반환하지 않는 query는 lowerCamelCase를 사용하고 동사로 시작한다.
   - 예) createProduct, getUserFeatureList
     > user_feature_list는 user_id, feature 라는 모델 데이터를 가진 배열을 반환한다면 getUserFeatureList는 다른 형태(이 경우 문자열의 배열)를 반환한다.
@@ -26,7 +28,7 @@
   - 단일 객체 query는 어떤 객체에도 대응하지 않는다.
   - 객체 목록 query는 모든 객체에 대응한다.
 - 여러가지 값 중 하나를 가지는 레코드를 찾으려면 \_list 인자에 배열을 준다.
-  - 예) id_list: ['1','4'], status_list: [NORMAL, SOLD_OUT]
+  - 예) `id_list: ['1','4']`, `status_list: [NORMAL, SOLD_OUT]`
 - 동일성 검사가 아닌 경우 이름 뒤에 원하는 연산자를 붙인다. (접두사 i는 case-insensitive를 의미)
   - gt, gte, lt, lte: >, >=, <, <=
   - contains: 해당 텍스트를 포함한다. 대소문자를 구분한다.
@@ -51,7 +53,7 @@
 - 배열의 내용물은 특별한 사유가 있지 않는 한 non-null로 설정한다.
   - 예) `keyword_list: [String!]`
 - 반환 값에 배열이 있는 경우 non-null로 설정한다. 배열에 내용물이 없을 경우 빈 배열([])을 반환하면 된다.
-  - 예) (o) `item_list: [Product!]!`, (x) `item_list: [Product!]`
+  - `item_list: [Product!]!` :o:, `item_list: [Product!]` :x:
 
 ## 배열 query
 
