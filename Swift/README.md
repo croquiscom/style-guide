@@ -3,13 +3,14 @@
 
 ## Lint
 
-[SwiftLint](https://github.com/realm/SwiftLint)를 사용해 Lint를 한다.
-설정은 [.swiftlint.yml](.swiftlint.yml)를 참고한다.
+[SwiftLint](https://github.com/realm/SwiftLint)를 사용해 Lint를 합니다.
+설정은 [.swiftlint.yml](.swiftlint.yml)를 참고합니다.
 
 ## 1. 코드 레이아웃
 
 - 들여쓰기에는 4개의 space를 사용합니다.
-- 줄바꿈
+- 줄바꿈 (추천 사항)
+  - 줄바꿈의 경우 아래의 규칙을 꼭 지키지 않아도 괜찮습니다.
   - 배열 혹은 딕셔너리의 경우 아래와 같이 줄바꿈합니다.
 
     ```swift
@@ -25,10 +26,9 @@
   - 함수를 호출하는 코드에서 파라미터가 두 개 이상인 경우에는 파라미터를 기준으로 줄바꿈합니다.
 
     ```swift
-    someFunctionWithManyArguments(
-        firstArgument: "Hello, I am a string",
-        secondArgument: resultFromSomeFunction(),
-        thirdArgument: someOtherLocalProperty)
+    someFunctionWithManyArguments(firstArgument: "Hello, I am a string",
+                                  secondArgument: resultFromSomeFunction(),
+                                  thirdArgument: someOtherLocalProperty)
     ```
   - `if-let` 구문, `guard-let` 구문은 아래와 같이 줄바꿈하고 한 칸 들여씁니다.
 
@@ -158,6 +158,8 @@
     }
     ```
 
+  - `Extension` 은 특정 기능에만 활용되는 경우에만 뒤에 `+`를 붙입니다. (e.g. UINavigationBar+Border)
+
 ## 3. 코딩 스타일
 
 ### General
@@ -189,11 +191,13 @@
   // 나쁜 예
   imageView.backgroundColor = UIColor.white
   ```
-- 함수의 전달 인자가 Void 형태를 가지는 경우에는 `()` 혹은 `Void()` 를 넘깁니다.
+- 함수의 전달 인자가 Void 형태를 가지는 경우에는 `Void()` 를 넘깁니다.
 
   ```swift
+  // 좋은 예
   Observable<Void>.just(Void())
 
+  // 나쁜 예
   Observable<Void>.just(())
   ```
 
@@ -333,6 +337,18 @@
   }
   ```
 
+- 선언된 변수가 IUO 타입이면 명시적으로 `!`를 사용하고, Optional 타입이면 `let`을 사용해 언래핑하여 사용합니다.
+  ```swift
+  // 좋은 예
+  @IBOutlet weak var goodsView: UIView!
+  ..
+  NSLayoutConstraint(item: goodsView!,...)
+
+  // 나쁜 예
+  @IBOutlet weak var goodsView: UIView!
+  ..
+  NSLayoutConstraint(item: goodsView as Any,...)
+  ```
 
 
 ## 4. 주석
