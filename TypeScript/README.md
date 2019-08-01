@@ -14,6 +14,7 @@
 * 변수명은 snake_case가 기본이지만 lowerCamelCase도 허용한다.
 * 상수에 가까운 변수인 경우 UPPER_CASE를 사용한다.
 * PascalCase는 기본적으로 허용하지 않지만, 클래스에 가까운 변수인 경우(예, React의 HOC) 사용할 수 있다.
+* 함수/변수 이름은 _(underscore)로 시작하지 않는다.
 
 ### 기타
 
@@ -102,6 +103,7 @@ const my_obj = {
 ```typescript
 // bad
 const SomeValue = 1;
+const _some_value = 1;
 
 // best
 const some_value = 1;
