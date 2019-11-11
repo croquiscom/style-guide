@@ -34,6 +34,12 @@
 * Promise 라이브러리 (native, Bluebird, q 등)
   * 가능하면 native Promise를 사용한다.
   * 고급기능(예, map의 concurrency)이 필요하면 bluebird를 사용해도 된다.
+  
+## 타입
+
+* Generic Type으로 대체 가능한 경우 `as`를 사용하지 않는다.
+  * 좋은 예시 : `arr.reduce<T>(reducer, [])`
+  * 나쁜 예시 : `arr.reduce(reducer, [] as T[])`
 
 ## Compiler Options (tsconfig.json)
 
