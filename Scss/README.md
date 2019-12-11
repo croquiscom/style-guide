@@ -1,5 +1,5 @@
 
-# 크로키닷컴 Scss 스타일 가이드
+# 크로키닷컴 SCSS 스타일 가이드
 
 ## Lint
 
@@ -12,10 +12,10 @@ config 설정은 [.stylelintrc](.stylelintrc)를 사용합니다.
 
 ### selector
 
-* class slector, id slector는 snake_case를 권장합니다. (kebob-case도 사용가능합니다.)
+* class selector, id selector는 snake_case를 권장합니다. (kebob-case도 사용가능합니다.)
   - snake_case를 사용하는 이유는 css module의 사용을 용의하게 하기 위함입니다. (class cat과도 궁합이 좋습니다.)
-  - 크로키닷컴의 경우 javascript도 snake_case를 사용하기 때문에 궁합이 더 좋을 것으로 생각됩니다.
-* scss 변수명도 마찬가지로 snake_case로 작성합니다.
+  - 크로키닷컴의 경우 JavaScript도 snake_case를 사용하기 때문에 궁합이 더 좋을 것으로 생각됩니다.
+* SCSS 변수명도 마찬가지로 snake_case로 작성합니다.
 
 ``` scss
 // bad
@@ -29,7 +29,7 @@ config 설정은 [.stylelintrc](.stylelintrc)를 사용합니다.
 }
 
 // good
-.post-item {
+.post_item {
   // style
 }
 
