@@ -1,0 +1,25 @@
+{
+  "extends": "stylelint-config-recommended",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "selector-class-pattern": "^([a-z][a-z0-9]*)((_|-)[a-z0-9]+)*$",
+    "selector-id-pattern": "^([a-z][a-z0-9]*)((_|-)[a-z0-9]+)*$",
+    "indentation": [
+      2,
+      {
+        "baseIndentLevel": 1
+      }
+    ],
+    "block-no-empty": true,
+    "block-opening-brace-space-before": "always",
+    "declaration-colon-space-after": "always",
+    "max-nesting-depth": 3,
+    "string-quotes": "single",
+    "block-opening-brace-newline-after": "always-multi-line",
+    "block-closing-brace-newline-before": "always-multi-line",
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true
+  }
+}
