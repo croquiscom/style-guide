@@ -2,11 +2,13 @@
 
 ## Lint
 
+### TSLint
+
 기본적으로는 [tslint:recommended](https://github.com/palantir/tslint/blob/master/src/configs/recommended.ts)의
 설정을 따르지만, 몇가지 예외를 가진다.
-예외적인 설정에 대해서는 [index.js](index.js)를 참고한다.
+예외적인 설정에 대해서는 [index.js](tslint/index.js)를 참고한다.
 
-모듈 설치 대신 설정을 복사해서 사용할 수 있도록 [tslint.json](tslint.json)도 같은 내용을 나타낸다.
+모듈 설치 대신 설정을 복사해서 사용할 수 있도록 [tslint.json](tslint/tslint.json)도 같은 내용을 나타낸다.
 
 ### 네이밍
 
@@ -34,7 +36,7 @@
 * Promise 라이브러리 (native, Bluebird, q 등)
   * 가능하면 native Promise를 사용한다.
   * 고급기능(예, map의 concurrency)이 필요하면 bluebird를 사용해도 된다.
-  
+
 ## 타입
 
 * Generic Type으로 대체 가능한 경우 `as`를 사용하지 않는다.
