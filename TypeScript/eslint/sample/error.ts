@@ -29,6 +29,11 @@ if (a = b) {
   //
 }
 
+// no-constant-condition
+if (true) {
+  //
+}
+
 // no-eval
 eval('var a = 0');
 
@@ -56,7 +61,11 @@ let var1: any, var2: any;
 let my_const = 1;
 
 // quotes:single
-const my_str = "hello";
+"hello";
 
 // radix:as-needed
 parseInt('071', 10);
+
+// @typescript-eslint/array-type:array-simple
+const at1: Array<string> = [];
+const at2: (string | number)[] = [];

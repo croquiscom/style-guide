@@ -40,6 +40,9 @@ module.exports = {
     // 생성자 호출시 괄호를 써야한다.
     'new-parens': ['error', 'always'],
 
+    // 조건문에 상수를 허용하지 않는다. 다만 while(true)는 허용한다.
+    'no-constant-condition': ['error', { checkLoops: false }],
+
     // eval을 사용할 수 없다.
     'no-eval': ['error'],
 
@@ -62,10 +65,13 @@ module.exports = {
     'quote-props': ['error', 'consistent-as-needed'],
 
     // 문자열은 작은 따옴표를 사용한다.
-    'quotes': ['error', 'single'],
+    'quotes': ['error', 'single', { avoidEscape: true }],
 
     // parseInt에 10 이외의 밑을 주어야 한다.
     'radix': ['error', 'as-needed'],
+
+    // 단순 배열 타입에만 [] 문법을 사용한다.
+    '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
 
     // camelcase를 강제하지 않는다.
     '@typescript-eslint/camelcase': 'off',

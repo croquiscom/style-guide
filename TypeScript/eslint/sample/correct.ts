@@ -31,6 +31,12 @@ if (a === b) {
   //
 }
 
+// no-constant-condition
+const x = 1;
+if (x === 1) {
+  //
+}
+
 // no-multiple-empty-lines
 
 // no-shadow
@@ -53,7 +59,13 @@ let var2: any;
 const my_const = 1;
 
 // quotes:single
-const my_str = 'hello';
+'hello';
+// quotes:avoidEscape
+"my 'single' string";
 
 // radix:as-needed
 parseInt('071');
+
+// @typescript-eslint/array-type:array-simple
+const at1: string[] = [];
+const at2: Array<string | number> = [];
