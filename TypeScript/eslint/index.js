@@ -8,7 +8,6 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],
 
   ignorePatterns: [
@@ -87,9 +86,6 @@ module.exports = {
 
     // unused vars를 허용한다.
     '@typescript-eslint/no-unused-vars': 'off',
-
-    // unbound method를 허용한다. _.identity 같은 코드가 있다.
-    '@typescript-eslint/unbound-method': 'off',
   },
 
   overrides: [
