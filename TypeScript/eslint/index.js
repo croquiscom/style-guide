@@ -10,10 +10,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
   ],
 
-  ignorePatterns: [
-    '!.eslintrc.js', // .eslintrc.js 파일도 검사한다.
-  ],
-
   rules: {
     // 화살표 함수의 인자에 괄호를 써야한다.
     'arrow-parens': ['error', 'always'],
