@@ -8,6 +8,9 @@ function fun_rt() {
 // @typescript-eslint/no-explicit-any:off
 const var_any: any = 1;
 
+// @typescript-eslint/no-inferrable-types
+const var_nit: number = 1;
+
 // @typescript-eslint/no-non-null-assertion:off
 const var_nna = { prop: 1 } as { prop: number } | null;
 console.log(var_nna!.prop);

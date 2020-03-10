@@ -81,6 +81,9 @@ module.exports = {
     // any를 허용한다.
     '@typescript-eslint/no-explicit-any': 'off',
 
+    // 타입 유추가 가능해도 타입을 지정할 수 있다.
+    '@typescript-eslint/no-inferrable-types': 'off',
+
     // ! 연산자 허용
     '@typescript-eslint/no-non-null-assertion': 'off',
 
