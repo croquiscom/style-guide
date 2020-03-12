@@ -19,3 +19,7 @@ console.log(var_nna!.prop);
 const var_tas1: number = Math.random();
 const var_tas2: () => number = Math.random;
 const var_tas3: new () => Error = Error;
+
+// @typescript-eslint/no-use-before-define:functions
+function f1() { return f2(); }
+function f2() { return f1(); }

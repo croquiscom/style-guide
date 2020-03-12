@@ -85,6 +85,9 @@ module.exports = {
 
     // unused vars를 허용한다.
     '@typescript-eslint/no-unused-vars': 'off',
+
+    //
+    '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
   },
 
   overrides: [
