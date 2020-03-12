@@ -2,6 +2,9 @@
 
 ## Lint
 
+### ESLint
+[eslint](eslint) 디렉토리를 참고한다.
+
 ### TSLint
 
 기본적으로는 [tslint:recommended](https://github.com/palantir/tslint/blob/master/src/configs/recommended.ts)의
@@ -52,7 +55,7 @@
 
 ## 예제
 
-### no-var-keyword:true
+### no-var
 ```typescript
 // bad
 var my_var: number;
@@ -63,7 +66,7 @@ let my_var: number;
 my_var = 1;
 ```
 
-### prefer-const:true
+### prefer-const
 ```typescript
 // bad
 let my_const = 1;
@@ -72,18 +75,7 @@ let my_const = 1;
 const my_const = 1;
 ```
 
-### interface-name:never-prefix
-```typescript
-// bad
-interface IMyInterface {
-}
-
-// good
-interface MyInterface {
-}
-```
-
-### quotemark:single
+### quotes:single
 ```typescript
 // bad
 const my_str = "hello";
@@ -92,7 +84,7 @@ const my_str = "hello";
 const my_str = 'hello';
 ```
 
-### trailing-comma:multiline-always
+### comma-dangle:always-multiline
 ```typescript
 // bad
 const my_obj = {
