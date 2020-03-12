@@ -8,6 +8,9 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
   ],
 
   rules: {
@@ -65,6 +68,9 @@ module.exports = {
     // parseInt에 10 이외의 밑을 주어야 한다.
     'radix': ['error', 'as-needed'],
 
+    // import 순서를 강제한다.
+    'import/order': ['error'],
+
     // 단순 배열 타입에만 [] 문법을 사용한다.
     '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
 
@@ -86,7 +92,7 @@ module.exports = {
     // unused vars를 허용한다.
     '@typescript-eslint/no-unused-vars': 'off',
 
-    //
+    // 함수 선언은 먼저 하지 않아도 된다.
     '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
   },
 
