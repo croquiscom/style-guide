@@ -52,6 +52,7 @@
 * noImplicitAny - 가급적 true로 하지만, 레거시 코드가 많은 경우 false도 가능하다.
 * noImplicitThis - true
 * strictNullChecks - true
+* target - (2020.3.28 수정) es2019 이하로 설정한다. es2020에 optional chaining 연산이 추가되어서 ts 컴파일러가 optional chaining 연산을 컴파일하지 않는다. 하지만 아직 브라우저나 노드에선 optional chaining을 지원하지 않아서, 에러가 발생하기 때문이다. 
 
 ## 예제
 
