@@ -69,3 +69,22 @@ parseInt('071');
 // @typescript-eslint/array-type:array-simple
 const at1: string[] = [];
 const at2: Array<string | number> = [];
+
+// object-curly-spacing
+const object_without_curly_spacing = { var1, var2 };
+// space-infix-ops
+const infix = 1 + 2;
+// comma-spacing
+const array_without_comma_spacing = [var1, var2];
+// semi
+const statement_without_semi = 1;
+// semi-spacing
+for (let i = 0; i < 10; i++) { /**/ }
+// arrow-spacing
+const arrow_function = () => {
+  return 1;
+};
+// space-before-blocks
+function normal_function() {
+  return 1;
+}

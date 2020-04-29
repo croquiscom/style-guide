@@ -94,6 +94,15 @@ module.exports = {
 
     // 함수 선언은 먼저 하지 않아도 된다.
     '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
+
+    // about style
+    'object-curly-spacing': ['error', 'always'],
+    'space-infix-ops': ['error'],
+    'comma-spacing': ['error'],
+    'semi': ['error'],
+    'semi-spacing': ['error'],
+    'arrow-spacing': ['error'],
+    'space-before-blocks': ['error'],
   },
 
   overrides: [
