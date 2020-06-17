@@ -1,7 +1,7 @@
 export { };
 
 // arrow-parens:always
-k => k
+k => k;
 
 // comma-dangle:always-multiline
 const my_obj = {
@@ -13,7 +13,7 @@ const my_obj = {
 if (console) console.log('ok');
 
 // dot-notation
-const foo: any = {};
+const foo = { bar: 1 };
 foo['bar'];
 
 // eqeqeq:always
@@ -43,7 +43,7 @@ eval('var a = 0');
 // no-shadow
 () => {
   const foo = 10;
-}
+};
 // no-shadow:builtinGlobals
 const Object = 1;
 
@@ -55,7 +55,7 @@ my_var = 2;
 const o = { my_obj: my_obj, foo2: foo };
 
 // one-var
-let var1: any, var2: any;
+let var1: number | undefined, var2: number | undefined;
 
 // prefer-const
 let my_const = 1;
