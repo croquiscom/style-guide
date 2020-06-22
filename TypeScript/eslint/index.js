@@ -62,8 +62,8 @@ module.exports = {
     // 객체 리터럴 속성 이름의 따옴표는 필요한 경우만 일관성있게 붙인다.
     'quote-props': ['error', 'consistent-as-needed'],
 
-    // 문자열은 작은 따옴표를 사용한다.
-    'quotes': ['error', 'single', { avoidEscape: true }],
+    // 문자열은 작은 따옴표와 Backtick을 사용한다.
+    'quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
 
     // parseInt에 10 이외의 밑을 주어야 한다.
     'radix': ['error', 'as-needed'],
