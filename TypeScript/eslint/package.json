@@ -1,6 +1,6 @@
 {
   "name": "@croquiscom/eslint-config",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^3.3.0",

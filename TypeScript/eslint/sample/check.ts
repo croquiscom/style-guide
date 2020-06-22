@@ -23,3 +23,6 @@ const var_tas3: new () => Error = Error;
 // @typescript-eslint/no-use-before-define:functions
 function f1(): number { return f2(); }
 function f2(): number { return f1(); }
+
+// quotes:allowTemplateLiterals
+`abcd`;
