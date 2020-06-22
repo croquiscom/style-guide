@@ -63,7 +63,7 @@ module.exports = {
     'quote-props': ['error', 'consistent-as-needed'],
 
     // 문자열은 작은 따옴표와 Backtick을 사용한다.
-    'quotes': ['error', 'single', { allowTemplateLiterals: true }],
+    'quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
 
     // parseInt에 10 이외의 밑을 주어야 한다.
     'radix': ['error', 'as-needed'],
