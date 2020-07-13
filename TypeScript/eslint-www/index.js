@@ -90,7 +90,7 @@ module.exports = {
     'no-redeclare': ['warn', { builtinGlobals: false }],
     'no-regex-spaces': 'warn',
     'no-restricted-syntax': ['warn', 'WithStatement'],
-    'no-script-url': 'warn',
+    'no-script-url': 'error',
     'no-self-assign': 'warn',
     'no-self-compare': 'warn',
     'no-sequences': 'warn',
@@ -124,7 +124,7 @@ module.exports = {
     'use-isnan': 'warn',
     'valid-typeof': 'warn',
     'no-restricted-properties': [
-      'error',
+      'warn',
       {
         object: 'require',
         property: 'ensure',
@@ -140,6 +140,7 @@ module.exports = {
     ],
     'no-restricted-imports': ['error', {'patterns': ['./*', '../*']}],
     'getter-return': 'warn',
+    'quotes': ['warn', 'single'],
     
     // Length options
     'max-len': ['error', {
