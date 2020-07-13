@@ -26,4 +26,4 @@ npm install --save-dev @croquiscom/eslint-config-www @typescript-eslint/eslint-p
 }
 ```
 
-You can override the settings from `eslint-config-zigzag-www` by editing the `.eslintrc.json` file. Learn more about [configuring ESLint](http://eslint.org/docs/user-guide/configuring) on the ESLint website.
+You can override the settings from `eslint-config-www` by editing the `.eslintrc.json` file. Learn more about [configuring ESLint](http://eslint.org/docs/user-guide/configuring) on the ESLint website.
