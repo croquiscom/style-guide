@@ -1,13 +1,13 @@
 'use strict';
 
-const restrictedGlobals = require('./confusing-browser-globals');
+const {restrictedGlobals} = require('./confusing-browser-globals');
 
 module.exports = {
   root: true,
 
   parser: '@typescript-eslint/parser',
 
-  plugins: ['import', 'jsx-a11y', 'react', 'react-hooks'],
+  plugins: ['@typescript-eslint/eslint-plugin', 'import', 'jsx-a11y', 'react', 'react-hooks'],
 
   env: {
     browser: true,
@@ -31,8 +31,6 @@ module.exports = {
       version: 'detect',
     },
   },
-
-  plugins: ['@typescript-eslint/eslint-plugin'],
 
   rules: {
     'array-callback-return': 'warn',
@@ -157,6 +155,7 @@ module.exports = {
     '@typescript-eslint/camelcase': 'off',
     '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',

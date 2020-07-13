@@ -5,7 +5,7 @@ This package includes the shareable ESLint configuration used by [Zigzag-www](ht
 ## Installation
 
 ```sh
-npm install --save-dev @croquiscom/eslint-config-www @typescript-eslint/eslint-plugin@3.x @typescript-eslint/parser@3.x eslint@7.x eslint-plugin-import@2.x eslint-plugin-jsx-a11y@6.x eslint-plugin-react@7.x eslint-plugin-react-hooks@4.x
+npm install --save-dev @croquiscom/eslint-config-www @typescript-eslint/eslint-plugin@^3.6.0 @typescript-eslint/parser@^3.6.0 eslint@^7.4.0 eslint-plugin-import@^2.22.0 eslint-plugin-jsx-a11y@^6.3.1 eslint-plugin-react@^7.20.3 eslint-plugin-react-hooks@^4.0.7
 ```
 
 ## Usage in www Projects
