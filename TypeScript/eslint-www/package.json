@@ -1,0 +1,25 @@
+{
+  "name": "eslint-config-www",
+  "version": "0.0.1",
+  "private": true,
+  "description": "ESLint configuration used by Croquiscom www",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/croquiscom/style-guide",
+    "directory": "Typescript/eslint-www"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/croquiscom/style-guide/issues"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0",
+    "eslint": "^7.4.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.7"
+  }
+}
