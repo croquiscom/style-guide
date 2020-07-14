@@ -13,8 +13,7 @@ npm install --save-dev @croquiscom/eslint-config-www @typescript-eslint/eslint-p
 ```json
 {
   "extends": [
-    "@croquiscom/eslint-config-www",
-    "plugin:react/recommended"
+    "@croquiscom/eslint-config-www"
   ],
   "overrides": [
     ...custom overrides
