@@ -71,8 +71,12 @@
 
 ## pagination
 
-- pagination은 개수 방식(limit_count, skip_count)과 커서 방식(limit_count, after, end_cursor)이 있다. 둘다 지원할 수도 있다.
-- 개수 방식은 limit_count / skip_count로 조절한다.
+- pagination은 개수 방식(limit_count, skip_count 또는 page, page_size)과 커서 방식(limit_count, after, end_cursor)이 있다. 둘다 지원할 수도 있다.
+- 개수 방식은 다음 중 하나를 사용한다. (SQL에 가까운 방식 vs Pagination UI에 적합한 방식)
+  - limit_count / skip_count
+  - page / page_size
+    - page는 1부터 시작한다.
+    - limit_count = page_size, skip_count = (page-1) * page_size를 쓴 것과 같다.
 - 커서 방식은 이전 query에서 반환한 end_cursor를 after 인자로 준다. 개수 제한은 limit_count로 한다.
 
 ## 날짜/시간
