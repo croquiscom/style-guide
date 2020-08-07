@@ -135,7 +135,8 @@ https://github.com/croquiscom/graphql-scalar-types 가 제공하는 Scalar를 �
     }
   ],
   "data": null
-}```
+}
+```
 
 ## GraphQL over HTTP
 
