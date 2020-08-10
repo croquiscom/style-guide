@@ -11,6 +11,10 @@
 - mutation이나 모델을 반환하지 않는 query는 lowerCamelCase를 사용하고 동사로 시작한다.
   - 예) createProduct, getUserFeatureList
     > user_feature_list는 user_id, feature 라는 모델 데이터를 가진 배열을 반환한다면 getUserFeatureList는 다른 형태(이 경우 문자열의 배열)를 반환한다.
+- 어떤 모델에 대한 일반적인 query가 아닌 특수 조건에 대한 query 역시 lowerCamelCase를 사용하고 동사로 시작한다.
+  - 예) getNewUserAccountList
+- 데이터베이스와 1:1 대응하지 않는 데이터(예 집계(aggregation) 데이터)의 경우 lowerCamelCase API로 정의해도 되고, 가상 모델에 대한 query API로 정의해도 된다.
+  - 예) user_account_overall_summary (권장), getUserAccountOverallSummary (허용)
 - 타입명은 UpperCamelCase(PascalCase)를 사용한다.
 - enum 타입의 값들은 UPPER_CASE를 사용한다.
 - mutation의 입력 타입명은 Input postfix를 사용한다.
