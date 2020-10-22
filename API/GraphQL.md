@@ -83,6 +83,21 @@
     - limit_count = page_size, skip_count = (page-1) * page_size를 쓴 것과 같다.
 - 커서 방식은 이전 query에서 반환한 end_cursor를 after 인자로 준다. 개수 제한은 limit_count로 한다.
 
+## 정렬
+
+- 모델 배열에 정렬 조건이 필요한 경우 모델명에 OrderType을 붙인 enum으로 정렬 조건을 정의한다.
+- 정렬 조건은 필드명에 ASC 또는 DESC를 붙인다.
+- 여러 조건이 합쳐질 수도 있다.
+  ```graphql
+  enum ProductOrderType {
+    ID_ASC
+    ID_DESC
+    NAME_ASC
+    DATE_YMD_PUBLISHED_DESC
+    STATUS_ASC_DATE_YMD_PUBLISHED_DESC
+  }
+  ```
+
 ## 날짜/시간
 
 - 날짜/시간 필드는 date_xxx를 사용한다.
