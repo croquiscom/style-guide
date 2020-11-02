@@ -3,13 +3,13 @@
   "version": "1.0.4",
   "license": "MIT",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.8.0",
-    "@typescript-eslint/parser": "^3.8.0",
-    "eslint-plugin-import": "^2.22.0"
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "@typescript-eslint/parser": "^4.6.0",
+    "eslint-plugin-import": "^2.22.1"
   },
   "devDependencies": {
-    "eslint": "^7.6.0",
-    "typescript": "^3.9.7"
+    "eslint": "^7.12.1",
+    "typescript": "^4.0.5"
   },
   "peerDependencies": {
     "eslint": ">= 6",

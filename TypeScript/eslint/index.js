@@ -47,9 +47,6 @@ module.exports = {
     // 연속된 빈줄을 쓸 수 없다.
     'no-multiple-empty-lines': ['error', { max: 1 }],
 
-    // 변수명이 겹치지 않아야 한다.
-    'no-shadow': ['error', { builtinGlobals: true, hoist: 'all' }],
-
     // 줄 끝에 공백을 허용하지 않는다.
     'no-trailing-spaces': ['error'],
 
@@ -88,6 +85,9 @@ module.exports = {
 
     // ! 연산자 허용
     '@typescript-eslint/no-non-null-assertion': 'off',
+
+    // 변수명이 겹치지 않아야 한다.
+    '@typescript-eslint/no-shadow': ['error', { builtinGlobals: true, hoist: 'all' }],
 
     // unused vars를 허용한다.
     '@typescript-eslint/no-unused-vars': 'off',
