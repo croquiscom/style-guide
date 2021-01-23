@@ -138,7 +138,6 @@ module.exports = {
           'Please use import() instead.',
       },
     ],
-    'no-restricted-imports': ['error', { patterns: ['./*', '../*'] }],
     'getter-return': 'warn',
 
     // Length options
