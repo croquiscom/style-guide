@@ -33,7 +33,10 @@ module.exports = {
     'eqeqeq': ['error', 'always', { null: 'ignore' }],
 
     // 들여쓰기는 공백 2칸을 사용한다. case는 한단계 들어쓴다. ternary를 Prettier와 맞춘다.
-    'indent': ['error', 2, { SwitchCase: 1, offsetTernaryExpressions: true }],
+    // 'indent': ['error', 2, { SwitchCase: 1, offsetTernaryExpressions: true }],
+
+    // TypeScript decorator등에 문제가 있어서 disable 하고, Prettier에 맡긴다.
+    'indent': 'off',
 
     // 생성자 호출시 괄호를 써야한다.
     'new-parens': ['error', 'always'],
