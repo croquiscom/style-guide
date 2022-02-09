@@ -15,7 +15,7 @@
   55:13  error  Expected property shorthand                                                             object-shorthand
   58:1   error  Split 'let' declarations into multiple statements                                       one-var
   61:5   error  'my_const' is never reassigned. Use 'const' instead                                     prefer-const
-  64:1   error  Strings must use singlequote                                                            quotes
+  64:2   error  Strings must use singlequote                                                            quotes
   67:1   error  Redundant radix parameter                                                               radix
   70:12  error  Array type using 'Array<string>' is forbidden for simple types. Use 'string[]' instead  @typescript-eslint/array-type
   71:12  error  Array type using 'T[]' is forbidden for non-simple types. Use 'Array<T>' instead        @typescript-eslint/array-type
@@ -27,9 +27,9 @@
   80:33  error  Missing semicolon                                                                       semi
   82:15  error  Missing whitespace after semicolon                                                      semi-spacing
   82:22  error  Missing whitespace after semicolon                                                      semi-spacing
-  84:25  error  Missing space before =>                                                                 arrow-spacing
-  84:28  error  Missing space after =>                                                                  arrow-spacing
-  88:27  error  Missing space before opening brace                                                      space-before-blocks
+  86:25  error  Missing space before =>                                                                 arrow-spacing
+  86:28  error  Missing space after =>                                                                  arrow-spacing
+  90:27  error  Missing space before opening brace                                                      space-before-blocks
 
 ✖ 32 problems (32 errors, 0 warnings)
   25 errors and 0 warnings potentially fixable with the `--fix` option.

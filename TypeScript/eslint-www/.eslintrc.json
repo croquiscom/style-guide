@@ -2,8 +2,6 @@
   "root": true,
   "extends": "./requiring-type-checking.js",
   "parserOptions": {
-    "project": [
-      "./tsconfig.json"
-    ]
+    "project": ["./tsconfig.json"]
   }
 }

@@ -128,28 +128,29 @@ module.exports = {
       {
         object: 'require',
         property: 'ensure',
-        message:
-          'Please use import() instead.',
+        message: 'Please use import() instead.',
       },
       {
         object: 'System',
         property: 'import',
-        message:
-          'Please use import() instead.',
+        message: 'Please use import() instead.',
       },
     ],
     'getter-return': 'warn',
 
     // Length options
-    'max-len': ['error', {
-      code: 120,
-      ignoreComments: true,
-      ignoreTrailingComments: true,
-      ignoreUrls: true,
-      ignoreStrings: true,
-      ignoreTemplateLiterals: true,
-      ignoreRegExpLiterals: true,
-    }],
+    'max-len': [
+      'error',
+      {
+        code: 120,
+        ignoreComments: true,
+        ignoreTrailingComments: true,
+        ignoreUrls: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true,
+      },
+    ],
 
     // TypeScript specific rules (and turn off ESLint equivalents)
     '@typescript-eslint/ban-ts-ignore': 'off',

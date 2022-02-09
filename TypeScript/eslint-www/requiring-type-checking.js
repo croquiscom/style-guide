@@ -1,8 +1,5 @@
 module.exports = {
-  extends: [
-    './index',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-  ],
+  extends: ['./index', 'plugin:@typescript-eslint/recommended-requiring-type-checking'],
 
   rules: {
     // indexOf 사용을 허용한다. (클라이언트 코드 때문에)

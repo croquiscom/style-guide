@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-unused-expressions */
 
-export { };
+export {};
 
 // @typescript-eslint/explicit-function-return-type:off
 function fun_rt() {
@@ -23,8 +23,12 @@ const var_tas2: () => number = Math.random;
 const var_tas3: new () => Error = Error;
 
 // @typescript-eslint/no-use-before-define:functions
-function f1(): number { return f2(); }
-function f2(): number { return f1(); }
+function f1(): number {
+  return f2();
+}
+function f2(): number {
+  return f1();
+}
 
 // quotes:allowTemplateLiterals
 `abcd`;

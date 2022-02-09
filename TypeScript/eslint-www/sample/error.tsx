@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-unused-expressions, no-self-compare, no-new-wrappers */
 
-export { };
+export {};
 
 // arrow-parens:always
 k => k;
@@ -63,7 +63,7 @@ let var1: number | undefined, var2: number | undefined;
 let my_const = 1;
 
 // quotes:single
-"hello";
+("hello");
 
 // radix:as-needed
 parseInt('071', 10);
@@ -81,7 +81,9 @@ const array_without_comma_spacing = [var1,var2];
 // semi
 const statement_without_semi = 1
 // semi-spacing
-for (let i = 0;i < 10;i++) { /**/ }
+for (let i = 0;i < 10;i++) {
+  /**/
+}
 // arrow-spacing
 const arrow_function = ()=>{
   return 1;
