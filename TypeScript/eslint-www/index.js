@@ -298,7 +298,19 @@ module.exports = {
     'radix': ['error', 'as-needed'],
 
     // import 순서를 강제한다.
-    'import/order': ['error'],
+    'import/order': [
+      'error',
+      {
+        alphabetize: { order: 'asc', caseInsensitive: true },
+        pathGroups: [
+          {
+            pattern: '{.,..}/**/*.css',
+            group: 'type',
+            position: 'after',
+          },
+        ],
+      },
+    ],
 
     // 단순 배열 타입에만 [] 문법을 사용한다.
     '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
