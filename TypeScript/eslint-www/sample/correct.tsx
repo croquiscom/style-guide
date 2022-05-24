@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-unused-expressions, no-self-compare, no-new-wrappers */
+/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-unused-expressions, no-self-compare, no-new-wrappers, @typescript-eslint/no-shadow*/
 
 export {};
 
@@ -12,6 +12,7 @@ const my_obj = {
 };
 
 // curly:all
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 if (console) {
   console.log('ok');
 }
@@ -21,6 +22,7 @@ const foo = { bar: 1 };
 foo.bar;
 
 // eqeqeq:always
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 0 === 0;
 
 // new-parens:always
@@ -35,6 +37,7 @@ if (a === b) {
 
 // no-constant-condition
 const x = 1;
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 if (x === 1) {
   //
 }
@@ -91,4 +94,12 @@ const arrow_function = () => {
 // space-before-blocks
 function normal_function() {
   return 1;
+}
+
+// @typescript-eslint/no-unnecessary-condition
+function fooFn(arg: string) {
+  // Necessary, since foo might be ''.
+  if (arg) {
+    //
+  }
 }
