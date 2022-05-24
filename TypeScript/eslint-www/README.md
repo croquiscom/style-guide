@@ -25,3 +25,18 @@ npm install --save-dev @croquiscom/eslint-config-www eslint typescript
 ```
 
 You can override the settings from `eslint-config-www` by editing the `.eslintrc.json` file. Learn more about [configuring ESLint](http://eslint.org/docs/user-guide/configuring) on the ESLint website.
+
+## publish
+
+1. Request permission of npm account from @sixmen
+2. Specifies module version
+
+```sh
+npm version {version}
+```
+
+3. publish
+
+```sh
+npm publish
+```
