@@ -10,7 +10,7 @@
   },
   "scripts": {
     "changeset": "changeset",
-    "release": "yarn build && changeset publish"
+    "release": "changeset publish"
   },
   "license": "MIT",
   "bugs": {
