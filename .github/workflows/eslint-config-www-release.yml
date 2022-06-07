@@ -11,9 +11,8 @@ jobs:
   release:
     name: Release eslint-config-www
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./TypeScript/eslint-www
+    env:
+      working-directory: ./TypeScript/eslint-www
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
@@ -30,10 +29,12 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
+        working-directory: ${{ env.working-directory }}
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
+        working-directory: ${{ env.working-directory }}
         with:
           version: npm run changeset version
           # This expects you to have a script called release which does a build for your packages and calls changeset publish
