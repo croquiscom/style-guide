@@ -12,7 +12,7 @@ jobs:
     name: Release eslint-config-www
     runs-on: ubuntu-latest
     env:
-      working-directory: ./TypeScript/eslint-www
+      working-directory: TypeScript/eslint-www
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
