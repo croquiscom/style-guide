@@ -54,3 +54,4 @@ git commit -m "chore: version bump"
 ```bash
 npm run release
 ```
+.
