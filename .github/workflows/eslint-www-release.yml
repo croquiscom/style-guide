@@ -3,7 +3,7 @@ name: Release eslint-config-www
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - TypeScript/eslint-www/**
 
@@ -38,3 +38,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+          
