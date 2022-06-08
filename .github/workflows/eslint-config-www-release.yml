@@ -25,18 +25,9 @@ jobs:
         with:
           node-version: 14.x
           registry-url: 'https://registry.npmjs.org'
-      - run: npm install -g npm@8.3.1
 
       - name: Install Dependencies
-        run: npm install
-        working-directory: ${{ env.working-directory }}
-
-      - name: Register Token
-        run: |
-          echo "//registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN" > /home/runner/work/_temp/.npmrc
-          echo "_auth=$NODE_AUTH_TOKEN" >>  /home/runner/work/_temp/.npmrc
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+        run: cd TypeScript/eslint-www && npm install
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
