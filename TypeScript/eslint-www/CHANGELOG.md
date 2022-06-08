@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config-www
 
+## 1.9.4
+
+### Patch Changes
+
+- 8ea11af: npmrc 설정파일 생성
+
 ## 1.9.3
 
 ### Patch Changes
