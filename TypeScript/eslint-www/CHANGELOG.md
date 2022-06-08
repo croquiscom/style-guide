@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config-www
 
+## 1.9.10
+
+### Patch Changes
+
+- ed015a8: rm unnecessary npmrc file
+
 ## 1.9.9
 
 ### Patch Changes
