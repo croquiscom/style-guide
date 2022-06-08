@@ -1,5 +1,12 @@
 # @croquiscom/eslint-config-www
 
+## 1.9.8
+
+### Patch Changes
+
+- f251416: set publish setting
+- 07ef4f1: fix yml
+
 ## 1.9.7
 
 ### Patch Changes
