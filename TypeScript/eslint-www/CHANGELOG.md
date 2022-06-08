@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config-www
 
+## 1.9.7
+
+### Patch Changes
+
+- d5d4c44: create .npmrc to HOME
+
 ## 1.9.6
 
 ### Patch Changes
