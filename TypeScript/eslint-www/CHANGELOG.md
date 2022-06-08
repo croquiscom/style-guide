@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config-www
 
+## 1.9.5
+
+### Patch Changes
+
+- 1faa0e9: npm token 주입 방법 수정
+
 ## 1.9.4
 
 ### Patch Changes
