@@ -53,4 +53,5 @@ jobs:
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_PUBLISH_TOKEN }}
+          package: ./TypeScript/eslint-www/package.json
           
