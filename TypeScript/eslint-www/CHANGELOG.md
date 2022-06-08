@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config-www
 
+## 1.9.6
+
+### Patch Changes
+
+- 7375768: fix yml file
+
 ## 1.9.5
 
 ### Patch Changes
