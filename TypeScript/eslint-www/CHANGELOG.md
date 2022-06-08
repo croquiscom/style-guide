@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config-www
 
+## 1.9.9
+
+### Patch Changes
+
+- 7db1f09: npm publish package.json 못찾는 버그 수정
+
 ## 1.9.8
 
 ### Patch Changes
