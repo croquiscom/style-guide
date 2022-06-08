@@ -48,9 +48,9 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
       - name: Publish
-        if: steps.changesets.outputs.hasChangesets==false
-        # You can do something when a publish should happen.
-      - run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_PUBLISH_TOKEN}}
+        if: steps.changesets.outputs.hasChangesets == 'false'
+        id: publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_PUBLISH_TOKEN }}
           
