@@ -13,6 +13,10 @@
     "release": "changeset publish"
   },
   "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "bugs": {
     "url": "https://github.com/croquiscom/style-guide/issues"
   },
