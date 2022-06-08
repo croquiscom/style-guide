@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config-www
 
+## 1.10.0
+
+### Minor Changes
+
+- c54d670: set auto deploy
+
 ## 1.9.10
 
 ### Patch Changes
