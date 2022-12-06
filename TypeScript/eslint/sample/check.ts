@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 export {};
 
 // @typescript-eslint/explicit-function-return-type:off

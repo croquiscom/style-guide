@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 export {};
 
 // arrow-parens:always
@@ -10,7 +12,7 @@ const my_obj = {
 };
 
 // curly:all
-if (console) {
+if (console) { // eslint-disable-line @typescript-eslint/no-unnecessary-condition
   console.log('ok');
 }
 
@@ -19,7 +21,7 @@ const foo = { bar: 1 };
 foo.bar;
 
 // eqeqeq:always
-0 === 0;
+0 === 0; // eslint-disable-line @typescript-eslint/no-unnecessary-condition
 
 // new-parens:always
 new String();
@@ -33,7 +35,7 @@ if (a === b) {
 
 // no-constant-condition
 const x = 1;
-if (x === 1) {
+if (x === 1) { // eslint-disable-line @typescript-eslint/no-unnecessary-condition
   //
 }
 
@@ -89,4 +91,12 @@ const arrow_function = () => {
 // space-before-blocks
 function normal_function() {
   return 1;
+}
+
+// @typescript-eslint/no-unnecessary-condition
+function fooFn(arg: string) {
+  // Necessary, since foo might be ''.
+  if (arg) {
+    //
+  }
 }

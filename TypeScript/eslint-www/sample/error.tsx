@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-unused-expressions, no-self-compare, no-new-wrappers, @typescript-eslint/no-shadow */
+/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-unused-expressions, no-self-compare, no-new-wrappers */
 
 export {};
 
@@ -12,16 +12,14 @@ const my_obj = {
 };
 
 // curly:all
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-if (console) console.log('ok');
+if (console) console.log('ok'); // eslint-disable-line @typescript-eslint/no-unnecessary-condition
 
 // dot-notation
 const foo = { bar: 1 };
 foo['bar'];
 
 // eqeqeq:always
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-0 == 0;
+0 == 0; // eslint-disable-line @typescript-eslint/no-unnecessary-condition
 
 // new-parens:always
 new String;
@@ -34,8 +32,7 @@ if (a = b) {
 }
 
 // no-constant-condition
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-if (true) {
+if (true) { // eslint-disable-line @typescript-eslint/no-unnecessary-condition
   //
 }
 
@@ -96,10 +93,10 @@ function normal_function(){
   return 1;
 }
 
-
 // @typescript-eslint/no-unnecessary-condition
 function fooFn(arg: 'bar' | 'baz') {
   // arg is never nullable or empty string, so this is unnecessary
   if (arg) {
+    //
   }
 }

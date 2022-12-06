@@ -92,11 +92,11 @@ module.exports = {
     // 변수명이 겹치지 않아야 한다.
     '@typescript-eslint/no-shadow': ['error', { builtinGlobals: true, hoist: 'all' }],
 
-    // unused vars를 허용한다.
-    '@typescript-eslint/no-unused-vars': 'off',
-
     // 함수 선언은 먼저 하지 않아도 된다.
     '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
+
+    // 불필요한 조건문 / operators를 사용하지 않는다
+    '@typescript-eslint/no-unnecessary-condition': ['error'],
 
     // about style
     'object-curly-spacing': ['error', 'always'],
