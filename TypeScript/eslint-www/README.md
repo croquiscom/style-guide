@@ -1,6 +1,6 @@
 # eslint-config-www
 
-This package includes the shareable ESLint configuration used by [Zigzag-www](https://github.com/croquiscom/zigzag-www).
+This package includes the shareable ESLint configuration used by Kakaostyle
 
 ## Installation
 
