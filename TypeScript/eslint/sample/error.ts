@@ -12,14 +12,14 @@ const my_obj = {
 };
 
 // curly:all
-if (console) console.log('ok');
+if (console) console.log('ok'); // eslint-disable-line @typescript-eslint/no-unnecessary-condition
 
 // dot-notation
 const foo = { bar: 1 };
 foo['bar'];
 
 // eqeqeq:always
-0 == 0;
+0 == 0; // eslint-disable-line @typescript-eslint/no-unnecessary-condition
 
 // new-parens:always
 new String;
@@ -32,7 +32,7 @@ if (a = b) {
 }
 
 // no-constant-condition
-if (true) {
+if (true) { // eslint-disable-line @typescript-eslint/no-unnecessary-condition
   //
 }
 
@@ -91,4 +91,12 @@ const arrow_function = ()=>{
 // space-before-blocks
 function normal_function(){
   return 1;
+}
+
+// @typescript-eslint/no-unnecessary-condition
+function fooFn(arg: 'bar' | 'baz') {
+  // arg is never nullable or empty string, so this is unnecessary
+  if (arg) {
+    //
+  }
 }
