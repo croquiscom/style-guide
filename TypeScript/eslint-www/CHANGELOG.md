@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config-www
 
+## 2.0.0
+
+### Major Changes
+
+- acbd05c: update modules
+
 ## 1.10.0
 
 ### Minor Changes
