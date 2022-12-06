@@ -11,41 +11,29 @@ jobs:
   release:
     name: Release eslint-config-www
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
-        with:
-          # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
-          fetch-depth: 0
+    defaults:
+      run:
+        working-directory: TypeScript/eslint-www
 
-      - name: Setup Node.js 14.x
-        uses: actions/setup-node@master
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 14.x
-          registry-url: https://registry.npmjs.org/
+          node-version: '18'
+          cache: npm
 
       - name: Install Dependencies
-        run: cd TypeScript/eslint-www && npm install
-
-      - name: Creating .npmrc
-        run: |
-          cat << EOF > "$HOME/.npmrc"
-            //registry.npmjs.org/:_authToken=$NPM_TOKEN
-          EOF
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+        run: npm install
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
         with:
           version: npm run changeset version
-          # This expects you to have a script called release which does a build for your packages and calls changeset publish
           publish: npm run release
-          cwd: ./TypeScript/eslint-www
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
-          createGithubReleases: false
-          
