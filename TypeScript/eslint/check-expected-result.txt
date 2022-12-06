@@ -9,8 +9,8 @@
   35:5   error  Unexpected constant condition                                                           no-constant-condition
   40:1   error  eval can be harmful                                                                     no-eval
   44:1   error  More than 1 blank line not allowed                                                      no-multiple-empty-lines
-  47:9   error  'foo' is already declared in the upper scope                                            @typescript-eslint/no-shadow
-  50:7   error  'Object' is already declared in the upper scope                                         @typescript-eslint/no-shadow
+  47:9   error  'foo' is already declared in the upper scope on line 18 column 7                        @typescript-eslint/no-shadow
+  50:7   error  'Object' is already a global variable                                                   @typescript-eslint/no-shadow
   53:1   error  Unexpected var, use let or const instead                                                no-var
   57:13  error  Expected property shorthand                                                             object-shorthand
   60:1   error  Split 'let' declarations into multiple statements                                       one-var
