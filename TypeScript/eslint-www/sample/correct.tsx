@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-unused-expressions, no-self-compare, no-new-wrappers, @typescript-eslint/no-shadow*/
+/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-unused-expressions, no-self-compare, no-new-wrappers */
 
 export {};
 
@@ -12,8 +12,7 @@ const my_obj = {
 };
 
 // curly:all
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-if (console) {
+if (console) { // eslint-disable-line @typescript-eslint/no-unnecessary-condition
   console.log('ok');
 }
 
@@ -22,8 +21,7 @@ const foo = { bar: 1 };
 foo.bar;
 
 // eqeqeq:always
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-0 === 0;
+0 === 0; // eslint-disable-line @typescript-eslint/no-unnecessary-condition
 
 // new-parens:always
 new String();
@@ -37,8 +35,7 @@ if (a === b) {
 
 // no-constant-condition
 const x = 1;
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-if (x === 1) {
+if (x === 1) { // eslint-disable-line @typescript-eslint/no-unnecessary-condition
   //
 }
 

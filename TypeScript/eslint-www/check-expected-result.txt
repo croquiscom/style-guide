@@ -30,6 +30,7 @@
   88:25  error  Missing space before =>                                                                 arrow-spacing
   88:28  error  Missing space after =>                                                                  arrow-spacing
   92:27  error  Missing space before opening brace                                                      space-before-blocks
+  99:7   error  Unnecessary conditional, value is always truthy                                         @typescript-eslint/no-unnecessary-condition
 
-✖ 32 problems (32 errors, 0 warnings)
+✖ 33 problems (33 errors, 0 warnings)
   25 errors and 0 warnings potentially fixable with the `--fix` option.
