@@ -100,3 +100,8 @@ function fooFn(arg: string) {
     //
   }
 }
+
+/* eslint-enable @typescript-eslint/no-unused-vars */
+function _unusedFunc(_unused_arg: number) {
+  const _unused_var: number = 1;
+}

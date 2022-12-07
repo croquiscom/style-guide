@@ -1,36 +1,39 @@
-   6:1   error  Expected parentheses around arrow function argument                                     arrow-parens
-   6:6   error  Unsafe return of an `any` typed value                                                   @typescript-eslint/no-unsafe-return
-  11:7   error  Missing trailing comma                                                                  comma-dangle
-  15:14  error  Expected { after 'if' condition                                                         curly
-  19:5   error  ["bar"] is better written in dot notation                                               dot-notation
-  22:3   error  Expected '===' and instead saw '=='                                                     eqeqeq
-  25:1   error  Missing '()' invoking a constructor                                                     new-parens
-  30:5   error  Expected a conditional expression and instead saw an assignment                         no-cond-assign
-  35:5   error  Unexpected constant condition                                                           no-constant-condition
-  40:1   error  eval can be harmful                                                                     no-eval
-  44:1   error  More than 1 blank line not allowed                                                      no-multiple-empty-lines
-  47:9   error  'foo' is already declared in the upper scope on line 18 column 7                        @typescript-eslint/no-shadow
-  50:7   error  'Object' is already a global variable                                                   @typescript-eslint/no-shadow
-  53:1   error  Unexpected var, use let or const instead                                                no-var
-  57:13  error  Expected property shorthand                                                             object-shorthand
-  60:1   error  Split 'let' declarations into multiple statements                                       one-var
-  63:5   error  'my_const' is never reassigned. Use 'const' instead                                     prefer-const
-  66:2   error  Strings must use singlequote                                                            quotes
-  69:1   error  Redundant radix parameter                                                               radix
-  72:12  error  Array type using 'Array<string>' is forbidden for simple types. Use 'string[]' instead  @typescript-eslint/array-type
-  73:12  error  Array type using 'T[]' is forbidden for non-simple types. Use 'Array<T>' instead        @typescript-eslint/array-type
-  76:38  error  A space is required after '{'                                                           object-curly-spacing
-  76:49  error  A space is required before '}'                                                          object-curly-spacing
-  78:12  error  Operator '=' must be spaced                                                             space-infix-ops
-  78:14  error  Operator '+' must be spaced                                                             space-infix-ops
-  80:42  error  A space is required after ','                                                           comma-spacing
-  82:33  error  Missing semicolon                                                                       semi
-  84:15  error  Missing whitespace after semicolon                                                      semi-spacing
-  84:22  error  Missing whitespace after semicolon                                                      semi-spacing
-  88:25  error  Missing space before =>                                                                 arrow-spacing
-  88:28  error  Missing space after =>                                                                  arrow-spacing
-  92:27  error  Missing space before opening brace                                                      space-before-blocks
-  99:7   error  Unnecessary conditional, value is always truthy                                         @typescript-eslint/no-unnecessary-condition
+    6:1   error    Expected parentheses around arrow function argument                                     arrow-parens
+    6:6   error    Unsafe return of an `any` typed value                                                   @typescript-eslint/no-unsafe-return
+   11:7   error    Missing trailing comma                                                                  comma-dangle
+   15:14  error    Expected { after 'if' condition                                                         curly
+   19:5   error    ["bar"] is better written in dot notation                                               dot-notation
+   22:3   error    Expected '===' and instead saw '=='                                                     eqeqeq
+   25:1   error    Missing '()' invoking a constructor                                                     new-parens
+   30:5   error    Expected a conditional expression and instead saw an assignment                         no-cond-assign
+   35:5   error    Unexpected constant condition                                                           no-constant-condition
+   40:1   error    eval can be harmful                                                                     no-eval
+   44:1   error    More than 1 blank line not allowed                                                      no-multiple-empty-lines
+   47:9   error    'foo' is already declared in the upper scope on line 18 column 7                        @typescript-eslint/no-shadow
+   50:7   error    'Object' is already a global variable                                                   @typescript-eslint/no-shadow
+   53:1   error    Unexpected var, use let or const instead                                                no-var
+   57:13  error    Expected property shorthand                                                             object-shorthand
+   60:1   error    Split 'let' declarations into multiple statements                                       one-var
+   63:5   error    'my_const' is never reassigned. Use 'const' instead                                     prefer-const
+   66:2   error    Strings must use singlequote                                                            quotes
+   69:1   error    Redundant radix parameter                                                               radix
+   72:12  error    Array type using 'Array<string>' is forbidden for simple types. Use 'string[]' instead  @typescript-eslint/array-type
+   73:12  error    Array type using 'T[]' is forbidden for non-simple types. Use 'Array<T>' instead        @typescript-eslint/array-type
+   76:38  error    A space is required after '{'                                                           object-curly-spacing
+   76:49  error    A space is required before '}'                                                          object-curly-spacing
+   78:12  error    Operator '=' must be spaced                                                             space-infix-ops
+   78:14  error    Operator '+' must be spaced                                                             space-infix-ops
+   80:42  error    A space is required after ','                                                           comma-spacing
+   82:33  error    Missing semicolon                                                                       semi
+   84:15  error    Missing whitespace after semicolon                                                      semi-spacing
+   84:22  error    Missing whitespace after semicolon                                                      semi-spacing
+   88:25  error    Missing space before =>                                                                 arrow-spacing
+   88:28  error    Missing space after =>                                                                  arrow-spacing
+   92:27  error    Missing space before opening brace                                                      space-before-blocks
+   99:7   error    Unnecessary conditional, value is always truthy                                         @typescript-eslint/no-unnecessary-condition
+  105:10  warning  'unusedFunc' is defined but never used. Allowed unused vars must match /^_/u            @typescript-eslint/no-unused-vars
+  105:21  warning  'unused_arg' is defined but never used. Allowed unused args must match /^_/u            @typescript-eslint/no-unused-vars
+  106:9   warning  'unused_var' is assigned a value but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
 
-✖ 33 problems (33 errors, 0 warnings)
+✖ 36 problems (33 errors, 3 warnings)
   25 errors and 0 warnings potentially fixable with the `--fix` option.

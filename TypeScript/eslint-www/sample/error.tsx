@@ -100,3 +100,8 @@ function fooFn(arg: 'bar' | 'baz') {
     //
   }
 }
+
+/* eslint-enable @typescript-eslint/no-unused-vars */
+function unusedFunc(unused_arg: number) {
+  const unused_var: number = 1;
+}

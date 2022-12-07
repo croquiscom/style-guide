@@ -32,3 +32,8 @@ function f2(): number {
 
 // quotes:allowTemplateLiterals
 `abcd`;
+
+/* eslint-enable @typescript-eslint/no-unused-vars */
+// @typescript-eslint/no-unused-vars:ignoreRestSiblings
+const base_obj = { a: 1, b: 2, c: 3 };
+const { a, ..._rest } = base_obj;
