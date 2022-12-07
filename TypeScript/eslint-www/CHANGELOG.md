@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config-www
 
+## 2.1.0
+
+### Minor Changes
+
+- 212010d: allow noused vars/args that starts with \_
+
 ## 2.0.0
 
 ### Major Changes
