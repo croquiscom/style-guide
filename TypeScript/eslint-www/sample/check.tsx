@@ -33,6 +33,11 @@ function f2(): number {
 // quotes:allowTemplateLiterals
 `abcd`;
 
+// @typescript-eslint/no-unnecessary-condition:allowConstantLoopConditions
+while (true) {
+  //
+}
+
 /* eslint-enable @typescript-eslint/no-unused-vars */
 // @typescript-eslint/no-unused-vars:ignoreRestSiblings
 const base_obj = { a: 1, b: 2, c: 3 };

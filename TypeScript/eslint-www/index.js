@@ -327,7 +327,7 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
 
     // 불필요한 조건문 / operators를 사용하지 않는다
-    '@typescript-eslint/no-unnecessary-condition': ['error'],
+    '@typescript-eslint/no-unnecessary-condition': ['error', { allowConstantLoopConditions: true }],
 
     // 사용하지 않는 변수를 경고한다. 단 _로 시작하는 변수는 무시한다.
     'no-unused-vars': 'off',
