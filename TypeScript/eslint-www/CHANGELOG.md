@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config-www
 
+## 2.2.0
+
+### Minor Changes
+
+- 80afd5b: allowConstantLoopConditions
+
 ## 2.1.0
 
 ### Minor Changes
