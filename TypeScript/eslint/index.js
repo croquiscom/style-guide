@@ -71,6 +71,9 @@ module.exports = {
     // import 순서를 강제한다.
     'import/order': ['error', { alphabetize: { order: 'asc', caseInsensitive: true } }],
 
+    // 과도한 import를 강요해서 적용하지 않는다. 예) import dayjs from 'dayjs'; dayjs.extend(); -> import { extend } from 'dayjs';
+    'import/no-named-as-default-member': 'off',
+
     // 단순 배열 타입에만 [] 문법을 사용한다.
     '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
 
