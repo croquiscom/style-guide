@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config-www
 
+## 2.3.0
+
+### Minor Changes
+
+- b8da51e: disable import/no-named-as-default-member
+
 ## 2.2.0
 
 ### Minor Changes
