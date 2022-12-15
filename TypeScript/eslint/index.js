@@ -71,6 +71,9 @@ module.exports = {
     // import 순서를 강제한다.
     'import/order': ['error', { alphabetize: { order: 'asc', caseInsensitive: true } }],
 
+    // 자연스러운 import를 방해해서 적용하지 않는다. 예) import Redis from 'ioredis';
+    'import/no-named-as-default': 'off',
+
     // 과도한 import를 강요해서 적용하지 않는다. 예) import dayjs from 'dayjs'; dayjs.extend(); -> import { extend } from 'dayjs';
     'import/no-named-as-default-member': 'off',
 
