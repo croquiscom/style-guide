@@ -1,6 +1,6 @@
 {
   "name": "@croquiscom/eslint-config-www",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "ESLint configuration used by Croquiscom www",
   "main": "index.js",
   "repository": {
