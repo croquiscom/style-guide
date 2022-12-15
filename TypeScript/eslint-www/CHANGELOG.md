@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config-www
 
+## 2.3.1
+
+### Patch Changes
+
+- d927c72: disable no-named-as-default
+
 ## 2.3.0
 
 ### Minor Changes
