@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config-www
 
+## 2.3.2
+
+### Patch Changes
+
+- 844f9e8: update dependencies
+
 ## 2.3.1
 
 ### Patch Changes
