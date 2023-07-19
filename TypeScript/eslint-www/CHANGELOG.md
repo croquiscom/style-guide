@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config-www
 
+## 2.4.0
+
+### Minor Changes
+
+- 3f6e040: update dependencies & typescript-eslint v6
+
 ## 2.3.2
 
 ### Patch Changes
