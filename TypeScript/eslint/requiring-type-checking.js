@@ -1,5 +1,9 @@
 module.exports = {
-  extends: ['./index', 'plugin:@typescript-eslint/recommended-type-checked'],
+  extends: [
+    './index',
+    'plugin:@typescript-eslint/recommended-type-checked',
+    'plugin:@typescript-eslint/stylistic-type-checked',
+  ],
 
   rules: {
     // indexOf 사용을 허용한다. (클라이언트 코드 때문에)
@@ -10,6 +14,7 @@ module.exports = {
 
     // reoverride rules by plugin:@typescript-eslint/recommended-type-checked
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-inferrable-types': 'off',
     '@typescript-eslint/no-unused-vars': [
       'warn',
       {

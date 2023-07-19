@@ -2,7 +2,7 @@
     6:6   error    Unsafe return of an `any` typed value                                                   @typescript-eslint/no-unsafe-return
    11:7   error    Missing trailing comma                                                                  comma-dangle
    15:14  error    Expected { after 'if' condition                                                         curly
-   19:5   error    ["bar"] is better written in dot notation                                               dot-notation
+   19:5   error    ["bar"] is better written in dot notation                                               @typescript-eslint/dot-notation
    22:3   error    Expected '===' and instead saw '=='                                                     eqeqeq
    25:1   error    Missing '()' invoking a constructor                                                     new-parens
    30:5   error    Expected a conditional expression and instead saw an assignment                         no-cond-assign
