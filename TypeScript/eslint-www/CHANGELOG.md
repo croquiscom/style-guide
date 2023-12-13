@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config-www
 
+## 2.5.0
+
+### Minor Changes
+
+- 195362b: update dependencies
+
 ## 2.4.0
 
 ### Minor Changes
