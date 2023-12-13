@@ -175,7 +175,7 @@ module.exports = {
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-constructor': 'warn',
 
-    // https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules
+    // https://github.com/benmosher/eslint-plugin-import/tree/main/docs/rules
     'import/first': 'error',
     'import/no-amd': 'error',
     'import/no-anonymous-default-export': 'off',
@@ -205,7 +205,7 @@ module.exports = {
     'react/require-render-return': 'error',
     'react/style-prop-object': 'warn',
 
-    // https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/master/docs/rules
+    // https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/main/docs/rules
     'jsx-a11y/accessible-emoji': 'warn',
     'jsx-a11y/alt-text': 'warn',
     'jsx-a11y/anchor-has-content': 'warn',
@@ -230,7 +230,7 @@ module.exports = {
     'jsx-a11y/role-supports-aria-props': 'warn',
     'jsx-a11y/scope': 'warn',
 
-    // https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
+    // https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
 
