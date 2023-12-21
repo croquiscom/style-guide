@@ -33,6 +33,7 @@ jobs:
         with:
           version: npm run changeset version
           publish: npm run release
+          title: 'chore(eslint): release x.y.z'
           cwd: ./TypeScript/eslint
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
