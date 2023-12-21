@@ -1,0 +1,40 @@
+name: Release eslint-config
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - TypeScript/eslint/**
+  workflow_dispatch:
+
+jobs:
+  release:
+    name: Release eslint-config
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: TypeScript/eslint
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Create Release Pull Request or Publish to npm
+        uses: changesets/action@v1
+        with:
+          version: npm run changeset version
+          publish: npm run release
+          cwd: ./TypeScript/eslint
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          createGithubReleases: false
