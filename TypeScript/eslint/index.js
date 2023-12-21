@@ -105,10 +105,10 @@ module.exports = {
     // 불필요한 조건문 / operators를 사용하지 않는다
     '@typescript-eslint/no-unnecessary-condition': ['error', { allowConstantLoopConditions: true }],
 
-    // 사용하지 않는 변수를 경고한다. 단 _로 시작하는 변수는 무시한다.
+    // 사용하지 않는 변수를 허용하지 않는다. 단 _로 시작하는 변수는 무시한다.
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': [
-      'warn',
+      'error',
       {
         ignoreRestSiblings: true,
         varsIgnorePattern: '^_',
