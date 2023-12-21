@@ -1,5 +1,5 @@
 ---
-'@croquiscom/eslint-config-www': minor
+'@croquiscom/eslint-config': minor
 ---
 
 unused vars are error now
