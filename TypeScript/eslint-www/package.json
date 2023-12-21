@@ -1,7 +1,7 @@
 {
   "name": "@croquiscom/eslint-config-www",
   "version": "2.5.0",
-  "description": "ESLint configuration used by Croquiscom www",
+  "description": "ESLint configuration used by Kakaostyle web projects",
   "main": "index.js",
   "repository": {
     "type": "git",

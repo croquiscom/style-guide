@@ -1,20 +1,20 @@
-name: Release eslint-config-www
+name: Release eslint-config
 
 on:
   push:
     branches:
       - main
     paths:
-      - TypeScript/eslint-www/**
+      - TypeScript/eslint/**
   workflow_dispatch:
 
 jobs:
   release:
-    name: Release eslint-config-www
+    name: Release eslint-config
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: TypeScript/eslint-www
+        working-directory: TypeScript/eslint
 
     steps:
       - name: Checkout code
@@ -33,7 +33,7 @@ jobs:
         with:
           version: npm run changeset version
           publish: npm run release
-          cwd: ./TypeScript/eslint-www
+          cwd: ./TypeScript/eslint
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
