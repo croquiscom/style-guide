@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config-www
 
+## 2.6.0
+
+### Minor Changes
+
+- 5414f0b: unused vars are error now
+
 ## 2.5.0
 
 ### Minor Changes
