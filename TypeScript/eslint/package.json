@@ -1,6 +1,6 @@
 {
   "name": "@croquiscom/eslint-config",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "description": "ESLint configuration used by Kakaostyle Node.js projects",
   "main": "index.js",
   "scripts": {
