@@ -25,7 +25,7 @@ foo['bar'];
 new String;
 
 // no-cond-assign
-const a = 1;
+let a = 1;
 const b = a + 1;
 if (a = b) {
   //
