@@ -1,5 +1,11 @@
+style-guide/TypeScript/eslint-www/sample/error-react.tsx
+   5:2  error    'NoUndef' is not defined                                                                                          react/jsx-no-undef
+  10:3  error    Your render method should have a return statement                                                                 react/require-render-return
+  23:6  warning  React Hook React.useEffect has a missing dependency: 'visible'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+style-guide/TypeScript/eslint-www/sample/error.ts
     6:1   error    Expected parentheses around arrow function argument                                     arrow-parens
-    6:6   error    Unsafe return of an `any` typed value                                                   @typescript-eslint/no-unsafe-return
+    6:6   error    Unsafe return of a value of type `any`                                                  @typescript-eslint/no-unsafe-return
    11:7   error    Missing trailing comma                                                                  comma-dangle
    15:14  error    Expected { after 'if' condition                                                         curly
    19:5   error    ["bar"] is better written in dot notation                                               @typescript-eslint/dot-notation
@@ -35,5 +41,5 @@
   105:21  warning  'unused_arg' is defined but never used. Allowed unused args must match /^_/u            @typescript-eslint/no-unused-vars
   106:9   warning  'unused_var' is assigned a value but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
 
-✖ 36 problems (33 errors, 3 warnings)
+✖ 39 problems (35 errors, 4 warnings)
   25 errors and 0 warnings potentially fixable with the `--fix` option.

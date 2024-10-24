@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
-    "strict": true
+    "strictNullChecks": true,
+    "module": "ES2022",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "checkJs": true,
+    "skipLibCheck": true,
+    "jsx": "preserve"
   }
 }
