@@ -1,5 +1,6 @@
+style-guide/TypeScript/eslint/sample/error.ts
     6:1   error    Expected parentheses around arrow function argument                                     arrow-parens
-    6:6   error    Unsafe return of an `any` typed value                                                   @typescript-eslint/no-unsafe-return
+    6:6   error    Unsafe return of a value of type `any`                                                  @typescript-eslint/no-unsafe-return
    11:7   error    Missing trailing comma                                                                  comma-dangle
    15:14  error    Expected { after 'if' condition                                                         curly
    19:5   error    ["bar"] is better written in dot notation                                               @typescript-eslint/dot-notation
