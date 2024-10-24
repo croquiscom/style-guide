@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config-www
 
+## 3.0.0
+
+### Major Changes
+
+- b70ba79: ESLint 9 and flat config
+
 ## 2.7.0
 
 ### Minor Changes
