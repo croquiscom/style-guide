@@ -10,21 +10,43 @@ npm install --save-dev @croquiscom/eslint-config-www eslint typescript
 
 ## Usage in www Projects
 
-```json
-{
-  "extends": [
-    "@croquiscom/eslint-config-www"
-  ],
-  "overrides": [
-    ...custom overrides
-  ],
-  "rules": {
-    ...custom rules
-  }
-}
+```javascript
+import baseConfig from '@croquiscom/eslint-config-www/index.mjs';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
+
+export default tseslint.config(
+  ...baseConfig,
+  {
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+      },
+
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+        project: `${import.meta.dirname}/tsconfig.json`,
+      },
+    },
+
+    settings: {
+      'import/resolver': {
+        typescript: {
+          project: `${import.meta.dirname}/tsconfig.json`,
+        },
+      },
+    },
+
+    rules: {},
+  },
+  {
+    ignores: ['eslint.config.mjs'],
+  },
+);
 ```
 
-You can override the settings from `eslint-config-www` by editing the `.eslintrc.json` file. Learn more about [configuring ESLint](http://eslint.org/docs/user-guide/configuring) on the ESLint website.
+You can override the settings from `eslint-config-www` by editing the `eslint.config.mjs` file. Learn more about [configuring ESLint](http://eslint.org/docs/user-guide/configuring) on the ESLint website.
 
 ### PR
 

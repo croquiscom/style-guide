@@ -2,23 +2,23 @@
   "name": "@croquiscom/eslint-config",
   "version": "3.0.0",
   "description": "ESLint configuration used by Kakaostyle Node.js projects",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/croquiscom/style-guide",
-    "directory": "Typescript/eslint"
-  },
-  "scripts": {
-    "changeset": "changeset",
-    "release": "changeset publish"
-  },
+  "main": "index.mjs",
   "license": "MIT",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/croquiscom/style-guide",
+    "directory": "Typescript/eslint"
+  },
   "bugs": {
     "url": "https://github.com/croquiscom/style-guide/issues"
+  },
+  "scripts": {
+    "changeset": "changeset",
+    "release": "changeset publish"
   },
   "dependencies": {
     "eslint-import-resolver-typescript": "^3.6.3",
