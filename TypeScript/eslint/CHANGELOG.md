@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config
 
+## 3.1.0
+
+### Minor Changes
+
+- 1344507: suppport TypeScript 5.7
+
 ## 3.0.0
 
 ### Major Changes
