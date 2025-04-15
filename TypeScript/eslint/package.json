@@ -1,6 +1,6 @@
 {
   "name": "@croquiscom/eslint-config",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "ESLint configuration used by Kakaostyle Node.js projects",
   "main": "index.mjs",
   "license": "MIT",
