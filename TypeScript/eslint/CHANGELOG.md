@@ -4,13 +4,13 @@
 
 ### Minor Changes
 
-- 2661d2e: suppport TypeScript 5.8
+- 2661d2e: support TypeScript 5.8
 
 ## 3.1.0
 
 ### Minor Changes
 
-- 1344507: suppport TypeScript 5.7
+- 1344507: support TypeScript 5.7
 
 ## 3.0.0
 
