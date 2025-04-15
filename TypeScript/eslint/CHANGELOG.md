@@ -1,5 +1,11 @@
 # @croquiscom/eslint-config
 
+## 3.2.0
+
+### Minor Changes
+
+- 2661d2e: suppport TypeScript 5.8
+
 ## 3.1.0
 
 ### Minor Changes
