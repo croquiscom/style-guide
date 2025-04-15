@@ -19,15 +19,12 @@ export default tseslint.config(
   importPlugin.flatConfigs.warnings,
   importPlugin.flatConfigs.typescript,
   /* eslint-enable @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access */
-  // @ts-expect-error react has a type error
-  react.configs.flat?.recommended,
+  react.configs.flat.recommended,
 
   {
     plugins: {
       'jsx-a11y': jsxA11y,
-      /* eslint-disable @typescript-eslint/no-unsafe-argument */
       'react-hooks': fixupPluginRules(reactHooks),
-      /* eslint-enable @typescript-eslint/no-unsafe-argument */
     },
 
     languageOptions: {
@@ -107,7 +104,7 @@ export default tseslint.config(
       'no-this-before-super': 'warn',
       'no-throw-literal': 'warn',
       'no-undef': 'off',
-      'no-restricted-globals': ['error'].concat(restrictedGlobals),
+      'no-restricted-globals': ['error', ...restrictedGlobals],
       'no-unreachable': 'warn',
       'no-unused-labels': 'warn',
       'no-useless-computed-key': 'warn',
