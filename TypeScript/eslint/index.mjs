@@ -123,6 +123,20 @@ export default tseslint.config(
         },
       ],
 
+      '@typescript-eslint/no-base-to-string': [
+        'error',
+        {
+          ignoredTypeNames: [
+            'Error',
+            'RegExp',
+            'URL',
+            'URLSearchParams',
+            // express route handler에서 쿼리 파라미터를 문자열로 가져올 때 `req.query.foo?.toString()`으로 쓰는 것을 허용
+            'ParsedQs',
+          ],
+        },
+      ],
+
       // about style
       'object-curly-spacing': ['error', 'always'],
       'space-infix-ops': ['error'],
