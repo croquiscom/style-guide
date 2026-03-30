@@ -9,11 +9,9 @@ export default tseslint.config(
   tseslint.configs.eslintRecommended,
   ...tseslint.configs.recommended,
   ...tseslint.configs.stylistic,
-  /* eslint-disable @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access */
   importPlugin.flatConfigs.errors,
   importPlugin.flatConfigs.warnings,
   importPlugin.flatConfigs.typescript,
-  /* eslint-enable @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access */
 
   {
     languageOptions: {
