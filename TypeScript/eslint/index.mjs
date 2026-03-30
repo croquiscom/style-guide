@@ -1,5 +1,6 @@
 import js from '@eslint/js';
-import importPlugin from 'eslint-plugin-import';
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
+import importXPlugin from 'eslint-plugin-import-x';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
@@ -9,11 +10,13 @@ export default tseslint.config(
   tseslint.configs.eslintRecommended,
   ...tseslint.configs.recommended,
   ...tseslint.configs.stylistic,
-  importPlugin.flatConfigs.errors,
-  importPlugin.flatConfigs.warnings,
-  importPlugin.flatConfigs.typescript,
+  importXPlugin.flatConfigs.errors,
+  importXPlugin.flatConfigs.warnings,
 
   {
+    settings: {
+      'import-x/resolver-next': [createTypeScriptImportResolver()],
+    },
     languageOptions: {
       globals: {
         ...globals.commonjs, // module, exports, require 허용
@@ -75,13 +78,13 @@ export default tseslint.config(
       'radix': ['error', 'as-needed'],
 
       // import 순서를 강제한다.
-      'import/order': ['error', { alphabetize: { order: 'asc', caseInsensitive: true } }],
+      'import-x/order': ['error', { alphabetize: { order: 'asc', caseInsensitive: true } }],
 
       // 자연스러운 import를 방해해서 적용하지 않는다. 예) import Redis from 'ioredis';
-      'import/no-named-as-default': 'off',
+      'import-x/no-named-as-default': 'off',
 
       // 과도한 import를 강요해서 적용하지 않는다. 예) import dayjs from 'dayjs'; dayjs.extend(); -> import { extend } from 'dayjs';
-      'import/no-named-as-default-member': 'off',
+      'import-x/no-named-as-default-member': 'off',
 
       // 단순 배열 타입에만 [] 문법을 사용한다.
       '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],

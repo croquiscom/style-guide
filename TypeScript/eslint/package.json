@@ -22,9 +22,8 @@
     "release": "changeset publish"
   },
   "dependencies": {
-    "@typescript-eslint/parser": "^8.57.2",
     "eslint-import-resolver-typescript": "^4.4.4",
-    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-import-x": "^4.12.2",
     "globals": "^17.4.0",
     "typescript-eslint": "^8.57.2"
   },
