@@ -8,6 +8,9 @@ on:
       - TypeScript/eslint/**
   workflow_dispatch:
 
+permissions:
+  id-token: write # for OIDC
+
 jobs:
   release:
     name: Release eslint-config
@@ -18,12 +21,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Install Dependencies
         run: npm install
@@ -37,5 +40,4 @@ jobs:
           cwd: ./TypeScript/eslint
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           createGithubReleases: false
