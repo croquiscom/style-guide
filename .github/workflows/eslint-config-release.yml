@@ -10,6 +10,8 @@ on:
 
 permissions:
   id-token: write # for OIDC
+  contents: write
+  pull-requests: write
 
 jobs:
   release:
