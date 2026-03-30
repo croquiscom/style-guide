@@ -1,5 +1,12 @@
 # @croquiscom/eslint-config
 
+## 3.3.0
+
+### Minor Changes
+
+- 985118e: support TypeScript 5.9
+- 985118e: eslint-plugin-import -> eslint-plugin-import-x
+
 ## 3.2.1
 
 ### Patch Changes
