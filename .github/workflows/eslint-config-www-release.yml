@@ -8,6 +8,11 @@ on:
       - TypeScript/eslint-www/**
   workflow_dispatch:
 
+permissions:
+  id-token: write # for OIDC
+  contents: write
+  pull-requests: write
+
 jobs:
   release:
     name: Release eslint-config-www
@@ -18,18 +23,18 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Install Dependencies
         run: npm install
 
       - name: Create Release Pull Request or Publish to npm
-        uses: changesets/action@v1
+        uses: changesets/action@v1.5.1
         with:
           version: npm run changeset version
           publish: npm run release
@@ -37,5 +42,4 @@ jobs:
           cwd: ./TypeScript/eslint-www
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           createGithubReleases: false
